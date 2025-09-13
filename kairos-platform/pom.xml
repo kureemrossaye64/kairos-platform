@@ -1,0 +1,120 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.5.5</version>
+  </parent>
+  <groupId>com.kairos</groupId>
+  <artifactId>kairos-platform</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>KAIROS - Knowledge &amp; Agentic Intelligence Runtime</name>
+  <description>The foundational platform for building intelligent applications.</description>
+  <packaging>pom</packaging>
+  <properties>
+        <!-- Project-wide Properties -->
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- Key Dependency Versions -->
+        <langchain4j.version>1.4.0</langchain4j.version>
+        <google.cloud.version>26.66.0</google.cloud.version>
+        <testcontainers.version>1.19.7</testcontainers.version>
+        <pgvector.version>0.1.6</pgvector.version>
+        <jjwt.version>0.13.0</jjwt.version>
+    </properties>
+    
+    <modules>
+        <module>kairos-core</module>
+        
+        <module>kairos-ai-abstraction</module>
+        <module>kairos-vector-search</module>
+        <module>kairos-ingestion</module>
+        <module>kairos-agentic-framework</module>
+    	
+        <module>cultural-archive-app</module>
+        <module>sports-atlas-app</module>
+
+        <module>kairos-store</module>
+        <module>kairos-storage</module>
+        <module>kairos-notification</module>
+        
+        <module>kairos-crawler</module>
+    </modules>
+    
+    <dependencyManagement>
+        <dependencies>
+            <!-- LangChain4j Bill of Materials (BOM) -->
+            <dependency>
+                <groupId>dev.langchain4j</groupId>
+                <artifactId>langchain4j-bom</artifactId>
+                <version>${langchain4j.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Google Cloud BOM -->
+            <dependency>
+                <groupId>com.google.cloud</groupId>
+                <artifactId>libraries-bom</artifactId>
+                <version>${google.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Testcontainers BOM for integration testing -->
+            <dependency>
+                <groupId>org.testcontainers</groupId>
+                <artifactId>testcontainers-bom</artifactId>
+                <version>${testcontainers.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Define versions for our own internal modules -->
+            <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-ai-abstraction</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-vector-search</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+             <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-ingestion</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-agentic-framework</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-storage</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-notification</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>com.kairos</groupId>
+                <artifactId>kairos-crawler</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
