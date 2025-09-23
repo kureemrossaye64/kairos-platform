@@ -19,7 +19,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-@Searchable(indexName = "services") // The single, unified search index
+@Searchable(indexName = "vec_services") // The single, unified search index
 public class ServiceEntity extends BaseEntity implements VectorSearcheable {
 
     @Column(nullable = false)

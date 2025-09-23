@@ -39,9 +39,9 @@ public class EntityIndexingListener implements ApplicationListener<EntityChangeE
 					event.getType(), entity.getId(), indexName);
 
 			if (event.getType() == EntityChangeEvent.ChangeType.DELETED) {
-				searchService.delete(indexName, entity.getId());
+				searchService.delete(entityClass, entity.getId());
 			} else {
-				searchService.index(indexName, entity.getId(), entity);
+				searchService.index(entity.getId(), entity);
 			}
 		}
 	}

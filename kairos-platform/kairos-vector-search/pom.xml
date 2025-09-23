@@ -30,17 +30,7 @@
 
 
 		<!-- pgvector-java: JDBC wrapper for the vector type -->
-		<dependency>
-			<groupId>dev.langchain4j</groupId>
-			<artifactId>langchain4j-opensearch</artifactId>
-			<exclusions>
-				<exclusion>
-					<groupId>org.opensearch.client</groupId>
-					<artifactId>opensearch-java</artifactId>
-				</exclusion>
-			</exclusions>
-			
-		</dependency>
+		
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -66,11 +56,7 @@
 		</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.opensearch.client/opensearch-java -->
-<dependency>
-    <groupId>org.opensearch.client</groupId>
-    <artifactId>opensearch-java</artifactId>
-    <version>3.2.0</version>
-</dependency>
+
 
 <!-- https://mvnrepository.com/artifact/org.reflections/reflections -->
 <dependency>
@@ -93,6 +79,32 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
+		<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
+</dependency>
+
+<!-- Spring Boot JDBC for JdbcTemplate -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
+
+<!-- LangChain4j PGVector Integration -->
+<dependency>
+    <groupId>dev.langchain4j</groupId>
+    <artifactId>langchain4j-pgvector</artifactId>
+    
+</dependency>
+
+<!-- pgvector JDBC wrapper -->
+<dependency>
+    <groupId>com.pgvector</groupId>
+    <artifactId>pgvector</artifactId>
+    <version>0.1.6</version>
+</dependency>
 		
 		<!-- https://mvnrepository.com/artifact/org.opensearch.client/opensearch-java -->
 

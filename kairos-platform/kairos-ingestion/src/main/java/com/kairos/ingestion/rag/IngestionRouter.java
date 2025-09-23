@@ -54,6 +54,12 @@ public class IngestionRouter implements IIngestionRouter{
     // Start a new transaction for this processing job.
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void handleSourceRecordCreated(SourceRecordCreatedEvent event) {
+    	try {
+    	Thread.sleep(3000);
+    	}catch(Exception e) {
+    		
+    	}
+    	
         SourceRecord record = sourceRecordRepository.findById(event.getSourceRecordId())
                 .orElseThrow(() -> new NoSuchElementException("SourceRecord not found for ID: " + event.getSourceRecordId()));
 
@@ -140,6 +146,7 @@ public class IngestionRouter implements IIngestionRouter{
                contentType.equals("application/msword") ||
                contentType.equals("text/plain") ||
                contentType.equals("text/csv") ||
+               contentType.equals("text/html") ||
                contentType.contains("officedocument"); // Catches .docx, .xlsx, etc.
     }
 

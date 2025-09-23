@@ -3,7 +3,6 @@ package com.kairos.agentic_framework.agent;
 import java.util.Map;
 
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Component;
 
 import com.kairos.agentic_framework.conversational_ingestion.ConversationIngestionToolSpec;
 import com.kairos.agentic_framework.transactional_chat.TransactionToolSpec;

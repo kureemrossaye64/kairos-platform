@@ -25,6 +25,10 @@
 			<artifactId>kairos-ingestion</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>com.kairos</groupId>
+			<artifactId>kairos-crawler</artifactId>
+		</dependency>
 		<!-- sports-atlas-app/pom.xml -->
 		<!-- ... inside <dependencies> ... -->
 		<dependency>

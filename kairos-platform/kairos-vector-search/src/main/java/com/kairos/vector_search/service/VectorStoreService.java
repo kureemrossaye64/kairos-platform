@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.util.List;
 import java.util.UUID;
 
-import org.opensearch.client.opensearch.indices.CreateIndexRequest;
-
 import com.kairos.search.model.SearchQuery;
 import com.kairos.search.model.SearchResult;
 import com.kairos.vector_search.model.VdbDocument;
@@ -40,12 +38,12 @@ public interface VectorStoreService {
     public void createIndexWithMapping(Class<?> entityClass)throws IOException;
     
     
-    void index(String indexName, UUID documentId, Object document);
+    void index(UUID documentId, Object document);
     
     
-    void delete(String indexName, UUID documentId);
+    void delete(Class<?> entityClass, UUID documentId);
     
-    public void deleteAll(String indexName, List<UUID> documentIds);
+    public void deleteAll(Class<?> entityClass, List<UUID> documentIds);
     
     // --- Unified Search Method ---
     SearchResult search(SearchQuery query, Class<?> entityClass);

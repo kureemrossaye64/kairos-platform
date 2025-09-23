@@ -18,6 +18,8 @@ import org.springframework.stereotype.Service;
 import com.github.javafaker.Faker;
 import com.kairos.core.entity.User;
 import com.kairos.core.repository.UserRepository;
+import com.kairos.crawler.entities.CrawlJob;
+import com.kairos.crawler.repositories.CrawlJobRepository;
 import com.kairos.sports_atlas.entities.Activity;
 import com.kairos.sports_atlas.entities.Athlete;
 import com.kairos.sports_atlas.entities.Facility;
@@ -63,11 +65,16 @@ public class SyntheticDataService {
 	private final ApprovalService approvalService;
 	
 	private final VectorStoreService openSearchIndexService;
+	
+	private final CrawlJobRepository crawljobRepository;
 
 	@PostConstruct
 	public void generateData() {
 		log.warn("DEV PROFILE ACTIVE: Generating synthetic data...");
 		
+		if(crawljobRepository.count() ==1) {
+			createCrawlJob();
+		}
 		
 		Map<String, Activity> activities = (activityRepository.count() == 0) ? generateActivities() : loadActivities();
 		if (userRepository.count() <= 1)
@@ -102,6 +109,14 @@ public class SyntheticDataService {
 
 	private Map<String, Activity> loadActivities() {
 		return activityRepository.findAll().stream().collect(Collectors.toMap(Activity::getName, a -> a));
+	}
+	
+	private void createCrawlJob() {
+		CrawlJob j = new CrawlJob();
+		j.setMaxDepth(10);
+		j.setName("mauritiusnow");
+		j.setSeedUrls(List.of("https://mauritiusnow.com"));
+		crawljobRepository.save(j);
 	}
 
 	private void generateAndApprovePublicFacilities(Map<String, Activity> activities) {
