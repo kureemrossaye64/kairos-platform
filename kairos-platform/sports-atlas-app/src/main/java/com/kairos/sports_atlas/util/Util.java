@@ -3,7 +3,7 @@ package com.kairos.sports_atlas.util;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.kairos.core.entity.User;
+import com.kairos.sports_atlas.entities.User;
 
 public class Util {
 	

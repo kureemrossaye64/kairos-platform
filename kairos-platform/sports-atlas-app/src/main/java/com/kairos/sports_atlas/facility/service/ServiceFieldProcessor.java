@@ -6,16 +6,16 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.agentic_framework.agent.Context;
-import com.kairos.agentic_framework.agent.ContextAwareStrategy;
-import com.kairos.agentic_framework.conversational_ingestion.FieldProcessorStrategy;
-import com.kairos.search.model.SearchQuery;
-import com.kairos.search.model.SearchResult;
+import com.kairos.agentic.conversational.FieldProcessorStrategy;
+import com.kairos.agentic.tools.Context;
+import com.kairos.agentic.tools.ContextAwareStrategy;
+import com.kairos.core.search.SearchQuery;
+import com.kairos.core.search.SearchResult;
+import com.kairos.core.search.VectorStoreService;
 import com.kairos.sports_atlas.entities.Facility;
 import com.kairos.sports_atlas.entities.ServiceEntity;
 import com.kairos.sports_atlas.repositories.FacilityRepository;
 import com.kairos.sports_atlas.repositories.ServiceEntityRepository;
-import com.kairos.vector_search.service.VectorStoreService;
 
 import lombok.RequiredArgsConstructor;
 

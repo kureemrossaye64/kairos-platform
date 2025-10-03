@@ -6,14 +6,14 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kairos.core.entity.BaseEntity;
-import com.kairos.search.model.SearchQuery;
-import com.kairos.search.model.SearchResult;
+import com.kairos.core.search.SearchQuery;
+import com.kairos.core.search.SearchResult;
+import com.kairos.core.search.VectorStoreService;
 import com.kairos.sports_atlas.common.GenericCrudService;
+import com.kairos.sports_atlas.entities.BaseEntity;
 import com.kairos.sports_atlas.entities.ServiceEntity;
 import com.kairos.sports_atlas.repositories.ServiceEntityRepository;
 import com.kairos.sports_atlas.services.Manifestable;
-import com.kairos.vector_search.service.VectorStoreService;
 
 import lombok.extern.slf4j.Slf4j;
 

@@ -7,11 +7,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kairos.agentic_framework.feedback.entity.PendingFeedbackRequest;
-import com.kairos.agentic_framework.feedback.repository.PendingFeedbackRepository;
-import com.kairos.core.entity.User;
-import com.kairos.core.repository.UserRepository;
 import com.kairos.notification.NotificationService;
+import com.kairos.sports_atlas.entities.PendingFeedbackRequest;
+import com.kairos.sports_atlas.entities.User;
+import com.kairos.sports_atlas.repositories.PendingFeedbackRepository;
+import com.kairos.sports_atlas.repositories.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

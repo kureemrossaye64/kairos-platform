@@ -1,7 +1,8 @@
 package com.kairos.sports_atlas.training.service;
 
-import com.kairos.agentic_framework.conversational_ingestion.FormCompletionStrategy;
-import com.kairos.agentic_framework.conversational_ingestion.form.Form;
+import com.kairos.agentic.conversational.FormCompletionStrategy;
+import com.kairos.agentic.form.Form;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

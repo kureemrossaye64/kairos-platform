@@ -1,22 +1,19 @@
 package com.kairos.ai_abstraction.config;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.validation.annotation.Validated;
+import lombok.Builder;
+import lombok.Data;
 
 /**
  * A type-safe configuration class to hold all properties related to Google Vertex AI.
  * This centralizes configuration and provides validation.
  * The prefix "kairos.ai.vertex" will be used in application.yml.
  */
-@ConfigurationProperties(prefix = "kairos.ai.vertex")
-@Validated
-@Getter
-@Setter
+@Data
+@Builder
 public class VertexAiProperties {
 	
+	@Builder.Default
 	private String transcriptionProvider = "speech-to-text";
 
     @NotBlank
@@ -26,16 +23,26 @@ public class VertexAiProperties {
     private String location;
 
     @NotBlank
+    @Builder.Default
     private String chatModelName = "gemini-2.0-flash";
     
     @NotBlank
+    @Builder.Default
     private String transcriptionModelName = "gemini-2.0-flash";
 
-    @NotBlank
-    private String embeddingModelName = "textembedding-gecko@003";
+    //@NotBlank
+    //@Builder.Default
+    //private String embeddingModelName = "textembedding-gecko@003";
 
+    @Builder.Default
     private Integer maxOutputTokens = 1024;
+    
+    @Builder.Default
     private Double temperature = 0.4;
+    
+    @Builder.Default
     private Double topP = 0.95;
+    
+    @Builder.Default
     private Integer topK = 40;
 }

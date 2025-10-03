@@ -3,7 +3,7 @@ package com.kairos.sports_atlas.tools;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.kairos.agentic_framework.tools.KairosTool;
+import com.kairos.agentic.tools.KairosTool;
 import com.kairos.sports_atlas.entities.PlayerLfg;
 import com.kairos.sports_atlas.lfg.service.LfgService;
 

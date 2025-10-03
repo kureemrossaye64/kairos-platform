@@ -4,10 +4,10 @@ import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.ai_abstraction.service.VideoAnalysisService;
-import com.kairos.ai_abstraction.service.VideoAnalysisService.VideoAnalysisResult;
+import com.kairos.core.ai.VideoAnalysisService;
+import com.kairos.core.ai.VideoAnalysisService.VideoAnalysisResult;
+import com.kairos.core.ingestion.SourceRecord;
 import com.kairos.ingestion.pipeline.Processor;
-import com.kairos.ingestion.source.SourceRecord;
 
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.Metadata;
@@ -26,7 +26,7 @@ public class VideoAnalysisProcessor implements Processor<SourceRecord, Document>
         log.info("Applying video analysis processor...");
         return sourceRecordStream.flatMap(record -> {
             try {
-                String gcsUri = record.getGcsUri();
+                String gcsUri = record.getStorageUri();
                 VideoAnalysisResult result = videoAnalysisService.analyze(gcsUri).join();
 
                 // Combine transcript and narrative into one rich text document for embedding.

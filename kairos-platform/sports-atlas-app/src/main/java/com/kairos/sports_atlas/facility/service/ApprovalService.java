@@ -55,4 +55,20 @@ public class ApprovalService {
         facilityRepository.save(facility);
         serviceEntityService.manifestService(facility);
     }
+    
+    public void approveItem(String entityType, UUID entityId) {
+        switch (entityType.toLowerCase()) {
+            case "partner":
+                approvePartner(entityId);
+                break;
+            case "trainingopportunity":
+                approveTrainingOpportunity(entityId);
+                break;
+            case "facility":
+                approveFacility(entityId);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown entity type for approval: " + entityType);
+        }
+    }
 }

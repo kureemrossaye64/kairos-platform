@@ -6,9 +6,9 @@ import java.time.format.DateTimeParseException;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.agentic_framework.agent.Context;
-import com.kairos.agentic_framework.agent.ContextAwareStrategy;
-import com.kairos.agentic_framework.conversational_ingestion.FieldProcessorStrategy;
+import com.kairos.agentic.conversational.FieldProcessorStrategy;
+import com.kairos.agentic.tools.Context;
+import com.kairos.agentic.tools.ContextAwareStrategy;
 import com.kairos.sports_atlas.repositories.ServiceEntityRepository;
 
 import lombok.RequiredArgsConstructor;

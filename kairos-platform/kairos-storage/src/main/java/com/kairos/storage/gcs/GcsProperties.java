@@ -1,15 +1,11 @@
 package com.kairos.storage.gcs;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.validation.annotation.Validated;
+import lombok.Builder;
+import lombok.Data;
 
-@ConfigurationProperties(prefix = "kairos.storage.gcs")
-@Validated
-@Getter 
-@Setter
+@Data
+@Builder
 public class GcsProperties {
     @NotBlank
     private String bucketName;

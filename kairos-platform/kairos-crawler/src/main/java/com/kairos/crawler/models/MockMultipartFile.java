@@ -1,8 +1,6 @@
 package com.kairos.crawler.models;
 
-import org.springframework.web.multipart.MultipartFile;
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -10,7 +8,7 @@ import java.io.InputStream;
  * A simple in-memory implementation of Spring's MultipartFile interface,
  * used to adapt crawler output to the IngestionRequest DTO.
  */
-public class MockMultipartFile implements MultipartFile {
+public class MockMultipartFile implements com.kairos.core.ingestion.MultipartFile {
 
     private final String name;
     private final String originalFilename;
@@ -32,5 +30,4 @@ public class MockMultipartFile implements MultipartFile {
     @Override public long getSize() { return content.length; }
     @Override public byte[] getBytes() { return content; }
     @Override public InputStream getInputStream() { return new ByteArrayInputStream(content); }
-    @Override public void transferTo(File dest) throws IOException, IllegalStateException { /* Not needed */ }
 }

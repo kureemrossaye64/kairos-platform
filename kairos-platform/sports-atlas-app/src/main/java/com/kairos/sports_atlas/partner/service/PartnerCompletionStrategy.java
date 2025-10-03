@@ -1,10 +1,11 @@
 package com.kairos.sports_atlas.partner.service;
 
-import com.kairos.agentic_framework.conversational_ingestion.FormCompletionStrategy;
-import com.kairos.agentic_framework.conversational_ingestion.form.Form;
+import com.kairos.agentic.conversational.FormCompletionStrategy;
+import com.kairos.agentic.form.Form;
+import com.kairos.core.search.VdbDocument;
+import com.kairos.core.search.VectorStoreService;
 import com.kairos.sports_atlas.entities.Partner;
-import com.kairos.vector_search.model.VdbDocument;
-import com.kairos.vector_search.service.VectorStoreService;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

@@ -7,14 +7,14 @@ import java.util.UUID;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kairos.agentic_framework.feedback.FeedbackHandler;
-import com.kairos.agentic_framework.feedback.entity.PendingFeedbackRequest;
+import com.kairos.core.search.VdbDocument;
+import com.kairos.core.search.VectorStoreService;
 import com.kairos.sports_atlas.entities.Facility;
+import com.kairos.sports_atlas.entities.PendingFeedbackRequest;
 import com.kairos.sports_atlas.entities.ServiceEntity;
+import com.kairos.sports_atlas.feedback.FeedbackHandler;
 import com.kairos.sports_atlas.repositories.FacilityRepository;
 import com.kairos.sports_atlas.repositories.ServiceEntityRepository;
-import com.kairos.vector_search.model.VdbDocument;
-import com.kairos.vector_search.service.VectorStoreService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -33,7 +33,7 @@ public class FacilityFeedbackHandler implements FeedbackHandler<BookingCompleted
     }
 
     @Override
-    public boolean canHandle(com.kairos.agentic_framework.feedback.FeedbackTriggerEvent event) {
+    public boolean canHandle(com.kairos.sports_atlas.feedback.FeedbackTriggerEvent event) {
         return event instanceof BookingCompletedEvent;
     }
 

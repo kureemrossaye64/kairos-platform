@@ -2,10 +2,8 @@ package com.kairos.sports_atlas.entities;
 
 import java.util.Set;
 
-import com.kairos.agentic_framework.transactional_chat.annotations.TransactionalEntity;
-import com.kairos.agentic_framework.transactional_chat.annotations.TransactionalField;
-import com.kairos.core.entity.BaseEntity;
-import com.kairos.core.entity.User;
+import com.kairos.agentic.transactional.annotations.TransactionalEntity;
+import com.kairos.agentic.transactional.annotations.TransactionalField;
 import com.kairos.sports_atlas.facility.service.ActivityFieldProcessor;
 import com.kairos.sports_atlas.facility.service.UserFieldProcessor;
 import com.kairos.sports_atlas.facility.service.UserListFieldProcessor;
@@ -36,7 +34,7 @@ public class Team extends BaseEntity {
     @Column(nullable = false, unique = true)
     @TransactionalField(
         description = "The official name for the new team.",
-        processor = com.kairos.agentic_framework.conversational_ingestion.DefaultFieldProcessor.class
+        processor = com.kairos.agentic.conversational.DefaultFieldProcessor.class
     )
     private String name;
 

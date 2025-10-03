@@ -9,13 +9,13 @@ import java.util.regex.Pattern;
 
 import org.apache.http.HttpStatus;
 
-import com.kairos.crawler.models.DocumentExtraction;
+import com.kairos.core.crawler.DocumentExtraction;
+import com.kairos.crawler.Page;
+import com.kairos.crawler.WebCrawler;
+import com.kairos.crawler.CrawlController.WebCrawlerFactory;
+import com.kairos.crawler.parser.HtmlParseData;
+import com.kairos.crawler.url.WebURL;
 
-import edu.uci.ics.crawler4j.crawler.CrawlController.WebCrawlerFactory;
-import edu.uci.ics.crawler4j.crawler.Page;
-import edu.uci.ics.crawler4j.crawler.WebCrawler;
-import edu.uci.ics.crawler4j.parser.HtmlParseData;
-import edu.uci.ics.crawler4j.url.WebURL;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 

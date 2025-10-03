@@ -2,8 +2,7 @@ package com.kairos.core.ingestion;
 
 import java.io.IOException;
 import java.util.Map;
-
-import org.springframework.web.multipart.MultipartFile;
+import java.util.UUID;
 
 import lombok.Getter;
 
@@ -14,12 +13,14 @@ import lombok.Getter;
  */
 @Getter
 public class IngestionRequest {
+	private final UUID id;
     private final MultipartFile file;
     private final Map<String, Object> metadataManifest;
 
     
 
     private IngestionRequest(MultipartFile file, Map<String,Object> metadata) {
+    	this.id = UUID.randomUUID();
     	this.file = file;
     	this.metadataManifest = metadata;
     }

@@ -1,10 +1,9 @@
 package com.kairos.sports_atlas.entities;
 
-import com.kairos.core.entity.BaseEntity;
-import com.kairos.search.annotation.GeoPointField;
-import com.kairos.search.annotation.Searchable;
-import com.kairos.search.annotation.SearchableField;
-import com.kairos.search.model.VectorSearcheable;
+import com.kairos.core.search.GeoPointField;
+import com.kairos.core.search.Searchable;
+import com.kairos.core.search.SearchableField;
+import com.kairos.core.search.VectorSearcheable;
 
 import jakarta.persistence.*;
 import lombok.Getter;

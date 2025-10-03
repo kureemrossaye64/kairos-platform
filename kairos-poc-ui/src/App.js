@@ -2,25 +2,37 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import AppLayout from './components/AppLayout';
-import SportsAtlasPage from './pages/SportsAtlasPage';
-import CulturalArchivePage from './pages/CulturalArchivePage';
-import FacilitiesPage from './pages/FacilitiesPage';
+import KayaAssistantPage from './pages/KayaAssistantPage';
+import IngestionPage from './pages/IngestionPage';
+import CrawlerPage from './pages/CrawlerPage';
+import LoginPage from './pages/LoginPage';
+// import RegisterPage from './pages/RegisterPage';
 import './App.css';
+import ProtectedRoute from './common/ProtectedRoute';
 
-// We'll create these page components in the next step.
-// For now, we'll just use placeholders.
+
+
+
+import ReviewPage from './pages/ReviewPage';
 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AppLayout />}>
-          {/* Index route redirects to the archive page by default */}
-          <Route index element={<Navigate to="/archive" replace />} />
-          <Route path="archive" element={<CulturalArchivePage />} />
-          <Route path="facilities" element={<FacilitiesPage />} />
-          <Route path="atlas" element={<SportsAtlasPage />} />
+        {/* Public Routes */}
+        <Route path="/login" element={<LoginPage />} />
+        {/* <Route path="/register" element={<RegisterPage />} /> */}
+
+        {/* Protected Routes */}
+        <Route element={<ProtectedRoute />}>
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<Navigate to="/chat" replace />} />
+            <Route path="chat" element={<KayaAssistantPage />} />
+            <Route path="ingestion" element={<IngestionPage />} />
+            <Route path="crawler" element={<CrawlerPage />} />
+            <Route path="review" element={<ReviewPage />} />
+          </Route>
         </Route>
       </Routes>
     </Router>

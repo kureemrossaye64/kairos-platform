@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.agentic_framework.conversational_ingestion.FieldProcessorStrategy;
+import com.kairos.agentic.conversational.FieldProcessorStrategy;
 import com.kairos.sports_atlas.entities.Activity;
 import com.kairos.sports_atlas.repositories.ActivityRepository;
 

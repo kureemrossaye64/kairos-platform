@@ -17,7 +17,11 @@
 			<groupId>com.kairos</groupId>
 			<artifactId>kairos-core</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>com.sleepycat</groupId>
+			<artifactId>je</artifactId>
+			<version>18.3.12</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -27,23 +31,60 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parser-pdf-module</artifactId>
+			<version>3.2.2</version>
+		</dependency>
 
+		<!--
+		https://mvnrepository.com/artifact/org.apache.tika/tika-parser-html-module -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parser-html-module</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.apache.tika/tika-parser-miscoffice-module -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parser-miscoffice-module</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>io.github.pgalbraith</groupId>
+			<artifactId>url-detector</artifactId>
+			<version>0.1.20</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>de.malkusch.whois-server-list</groupId>
+			<artifactId>public-suffix-list</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/com.google.apis/google-api-services-youtube -->
 		<dependency>
 			<groupId>com.google.apis</groupId>
 			<artifactId>google-api-services-youtube</artifactId>
-			<version>v3-rev222-1.25.0</version>
+			<version>v3-rev20250714-2.0.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.oauth-client</groupId>
 			<artifactId>google-oauth-client-jetty</artifactId>
 		</dependency>
-	<!-- https://mvnrepository.com/artifact/edu.uci.ics/crawler4j -->
-<dependency>
-    <groupId>edu.uci.ics</groupId>
-    <artifactId>crawler4j</artifactId>
-    <version>4.4.0</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/edu.uci.ics/crawler4j -->
 
+		<dependency>
+			<groupId>com.google.api-client</groupId>
+			<artifactId>google-api-client-jackson2</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>io.hypersistence</groupId>

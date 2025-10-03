@@ -1,4 +1,3 @@
-// src/main/java/com/kairos/sports_atlas/crawler/CrawlJobScheduler.java
 package com.kairos.crawler;
 
 
@@ -10,11 +9,11 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.kairos.core.crawler.CrawlJob;
+import com.kairos.core.crawler.CrawlJobPersistence;
+import com.kairos.core.crawler.CrawlStatus;
+import com.kairos.core.crawler.UrlToCrawl;
 import com.kairos.crawler.config.RabbitMQConfig;
-import com.kairos.crawler.entities.CrawlJob;
-import com.kairos.crawler.entities.CrawlStatus;
-import com.kairos.crawler.models.UrlToCrawl;
-import com.kairos.crawler.repositories.CrawlJobRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,14 +23,14 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 public class CrawlJobScheduler {
 
-    private final CrawlJobRepository crawlJobRepository;
+    private final CrawlJobPersistence crawlJobPersistence;
     private final RabbitTemplate rabbitTemplate; // Spring's helper for sending messages
 
     @Scheduled(fixedRate = 300000) // Run every 5 minutes
     @Transactional
     public void scheduleActiveJobs() {
         log.info("Checking for active crawl jobs to schedule...");
-        List<CrawlJob> activeJobs = crawlJobRepository.findByStatus(CrawlStatus.ACTIVE);
+        List<CrawlJob> activeJobs = crawlJobPersistence.getActiveJobs();
 
         if (activeJobs.isEmpty()) {
             log.info("No active crawl jobs found.");
@@ -48,7 +47,7 @@ public class CrawlJobScheduler {
                 rabbitTemplate.convertAndSend(RabbitMQConfig.URL_QUEUE_NAME, message);
                 log.debug("Published seed URL to queue: {}", seedUrl);
             }
-            crawlJobRepository.save(job);
+            crawlJobPersistence.saveOrUpdateCrawlJob(job);
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.kairos.sports_atlas.tools;
 
-import com.kairos.agentic_framework.tools.KairosTool;
+import com.kairos.agentic.tools.KairosTool;
 import com.kairos.sports_atlas.entities.Athlete;
 import com.kairos.sports_atlas.entities.PerformanceRecord;
 import com.kairos.sports_atlas.repositories.AthleteRepository;

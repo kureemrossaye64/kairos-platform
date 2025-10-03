@@ -4,10 +4,10 @@ import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
-import com.kairos.core.entity.User;
 import com.kairos.sports_atlas.common.GenericCrudService;
 import com.kairos.sports_atlas.entities.Activity;
 import com.kairos.sports_atlas.entities.Team;
+import com.kairos.sports_atlas.entities.User;
 import com.kairos.sports_atlas.repositories.TeamRepository;
 
 @Service

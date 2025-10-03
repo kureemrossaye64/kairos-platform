@@ -13,7 +13,6 @@
   	<dependency>
 			<groupId>com.kairos</groupId>
 			<artifactId>kairos-core</artifactId>
-			
 		</dependency>
   	<dependency>
 			<groupId>com.google.cloud</groupId>

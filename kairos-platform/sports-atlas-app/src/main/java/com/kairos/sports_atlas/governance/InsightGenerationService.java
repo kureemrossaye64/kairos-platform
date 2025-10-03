@@ -7,8 +7,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import com.kairos.agentic_framework.governance.InsightModule;
-import com.kairos.ai_abstraction.service.ChatLanguageModel;
+import com.kairos.agentic.governance.InsightModule;
+import com.kairos.core.ai.ChatLanguageModel;
 import com.kairos.notification.NotificationService;
 import com.kairos.sports_atlas.logging.service.ChatLogService;
 

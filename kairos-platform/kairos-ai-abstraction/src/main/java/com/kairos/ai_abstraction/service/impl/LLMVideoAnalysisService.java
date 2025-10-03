@@ -2,10 +2,8 @@ package com.kairos.ai_abstraction.service.impl;
 
 import java.util.concurrent.CompletableFuture;
 
-import org.springframework.stereotype.Service;
-
-import com.kairos.ai_abstraction.service.ChatLanguageModel;
-import com.kairos.ai_abstraction.service.VideoAnalysisService;
+import com.kairos.core.ai.ChatLanguageModel;
+import com.kairos.core.ai.VideoAnalysisService;
 
 import dev.langchain4j.data.message.TextContent;
 import dev.langchain4j.data.message.UserMessage;
@@ -13,17 +11,14 @@ import dev.langchain4j.data.message.VideoContent;
 import dev.langchain4j.service.AiServices;
 import lombok.extern.slf4j.Slf4j;
 
-@Service
 @Slf4j
 public class LLMVideoAnalysisService implements VideoAnalysisService{
 	
-	private final ChatLanguageModel chatModel;
 	
 	private final VideoAgent videoAgent;
 	
 	public LLMVideoAnalysisService(ChatLanguageModel chatModel) {
 		super();
-		this.chatModel = chatModel;
 		this.videoAgent = AiServices.create(VideoAgent.class, chatModel);
 	}
 	

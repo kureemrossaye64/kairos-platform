@@ -5,10 +5,10 @@ import java.util.List;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.kairos.agentic_framework.feedback.FeedbackHandler;
-import com.kairos.agentic_framework.feedback.FeedbackTriggerEvent;
-import com.kairos.agentic_framework.feedback.entity.PendingFeedbackRequest;
-import com.kairos.agentic_framework.feedback.repository.PendingFeedbackRepository;
+import com.kairos.sports_atlas.entities.PendingFeedbackRequest;
+import com.kairos.sports_atlas.feedback.FeedbackHandler;
+import com.kairos.sports_atlas.feedback.FeedbackTriggerEvent;
+import com.kairos.sports_atlas.repositories.PendingFeedbackRepository;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

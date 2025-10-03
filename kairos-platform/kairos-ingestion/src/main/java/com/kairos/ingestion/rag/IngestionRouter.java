@@ -1,27 +1,33 @@
 package com.kairos.ingestion.rag;
 
-import com.kairos.core.ingestion.IIngestionRouter;
-import com.kairos.core.ingestion.IngestionRequest;
-import com.kairos.ingestion.events.SourceRecordCreatedEvent;
-import com.kairos.ingestion.pipeline.DataSource;
-import com.kairos.ingestion.pipeline.Pipeline;
-import com.kairos.ingestion.processor.*;
-import com.kairos.ingestion.source.ProcessingStatus;
-import com.kairos.ingestion.source.SourcePersistenceService;
-import com.kairos.ingestion.source.SourceRecord;
-import com.kairos.ingestion.source.SourceRecordRepository;
-import com.kairos.storage.StorageService;
-import com.kairos.vector_search.service.VectorStoreService;
+import java.util.NoSuchElementException;
 
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.NoSuchElementException;
+import com.kairos.core.ingestion.IIngestionRouter;
+import com.kairos.core.ingestion.IngestionRequest;
+import com.kairos.core.ingestion.ProcessingStatus;
+import com.kairos.core.ingestion.SourceRecord;
+import com.kairos.core.ingestion.SourceRecordService;
+import com.kairos.core.search.VectorStoreService;
+import com.kairos.ingestion.events.SourceRecordCreatedEvent;
+import com.kairos.ingestion.pipeline.DataSource;
+import com.kairos.ingestion.pipeline.Pipeline;
+import com.kairos.ingestion.processor.AiEnrichmentProcessor;
+import com.kairos.ingestion.processor.AudioTranscriptionProcessor;
+import com.kairos.ingestion.processor.DocumentSplitterProcessor;
+import com.kairos.ingestion.processor.ImageAnalysisProcessor;
+import com.kairos.ingestion.processor.TextCleaningProcessor;
+import com.kairos.ingestion.processor.TikaDocumentParserProcessor;
+import com.kairos.ingestion.processor.VideoAnalysisProcessor;
+import com.kairos.ingestion.source.SourcePersistenceService;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
@@ -29,7 +35,7 @@ import java.util.NoSuchElementException;
 public class IngestionRouter implements IIngestionRouter{
 
     // --- Inject all available processors and services ---
-    private final SourceRecordRepository sourceRecordRepository;
+    private final SourceRecordService sourceRecordService;
     private final VectorStoreService searchService;
     
     // Media Processors (SourceRecord -> Document)
@@ -50,8 +56,7 @@ public class IngestionRouter implements IIngestionRouter{
      * @param event The event containing the ID of the new SourceRecord.
      */
     @EventListener
-    @Async // Run this entire process in a background thread.
-    // Start a new transaction for this processing job.
+    @Async 
     @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void handleSourceRecordCreated(SourceRecordCreatedEvent event) {
     	try {
@@ -60,14 +65,14 @@ public class IngestionRouter implements IIngestionRouter{
     		
     	}
     	
-        SourceRecord record = sourceRecordRepository.findById(event.getSourceRecordId())
+        SourceRecord record = sourceRecordService.retrieve(event.getSourceRecordId())
                 .orElseThrow(() -> new NoSuchElementException("SourceRecord not found for ID: " + event.getSourceRecordId()));
 
         log.info("Starting ingestion pipeline for SourceRecord ID: {}, ContentType: {}", record.getId(), record.getContentType());
 
         // Mark the record as PROCESSING to prevent duplicate runs.
         record.setStatus(ProcessingStatus.PROCESSING);
-        sourceRecordRepository.saveAndFlush(record);
+        sourceRecordService.save(record);
 
         try {
             // The DataSource for all pipelines is the single SourceRecord we are processing.
@@ -134,7 +139,7 @@ public class IngestionRouter implements IIngestionRouter{
             record.setStatus(ProcessingStatus.FAILED);
             record.setFailureReason(e.getMessage());
         } finally {
-            sourceRecordRepository.saveAndFlush(record);
+        	sourceRecordService.save(record);
         }
     }
 
@@ -153,8 +158,7 @@ public class IngestionRouter implements IIngestionRouter{
 	@Override
 	public void addRequest(IngestionRequest request) {
 		
-		persistenceService.persistNewSource(request.getFile(), request.getMetadataManifest());
-		// TODO Auto-generated method stub
+		persistenceService.triggerIngestion(request);
 		
 	}
 }

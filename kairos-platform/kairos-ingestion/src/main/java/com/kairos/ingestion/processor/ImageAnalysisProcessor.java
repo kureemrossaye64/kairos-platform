@@ -4,9 +4,9 @@ import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.ai_abstraction.service.ImageAnalysisService;
+import com.kairos.core.ai.ImageAnalysisService;
+import com.kairos.core.ingestion.SourceRecord;
 import com.kairos.ingestion.pipeline.Processor;
-import com.kairos.ingestion.source.SourceRecord;
 
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.Metadata;
@@ -27,7 +27,7 @@ public class ImageAnalysisProcessor implements Processor<SourceRecord, Document>
         return sourceRecordStream.flatMap(record -> {
             try {
                 // 1. Get the GCS URI from the source record.
-                String gcsUri = record.getGcsUri();
+                String gcsUri = record.getStorageUri();
 
                 // 2. Submit for transcription and wait synchronously for the result.
                 String transcript = analysisService.analyze(gcsUri).join();

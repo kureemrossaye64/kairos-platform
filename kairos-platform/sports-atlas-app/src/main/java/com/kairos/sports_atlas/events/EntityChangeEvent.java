@@ -1,11 +1,12 @@
 package com.kairos.sports_atlas.events;
 
-import com.kairos.core.entity.BaseEntity;
 import lombok.Getter;
 
 import java.util.List;
 
 import org.springframework.context.ApplicationEvent;
+
+import com.kairos.sports_atlas.entities.BaseEntity;
 
 @Getter
 public class EntityChangeEvent extends ApplicationEvent {

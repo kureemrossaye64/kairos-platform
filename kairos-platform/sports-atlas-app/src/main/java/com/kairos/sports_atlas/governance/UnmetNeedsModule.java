@@ -1,7 +1,8 @@
 package com.kairos.sports_atlas.governance;
 
-import com.kairos.agentic_framework.governance.InsightModule;
 import org.springframework.stereotype.Component;
+
+import com.kairos.agentic.governance.InsightModule;
 
 @Component
 public class UnmetNeedsModule implements InsightModule {

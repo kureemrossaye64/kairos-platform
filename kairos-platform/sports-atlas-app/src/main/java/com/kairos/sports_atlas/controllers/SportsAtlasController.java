@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.kairos.agentic_framework.agent.AgentFactory;
-import com.kairos.agentic_framework.agent.AiAgent;
+import com.kairos.agentic.agent.AgentFactory;
+import com.kairos.agentic.agent.AiAgent;
 import com.kairos.sports_atlas.common.SystemPromptService;
 import com.kairos.sports_atlas.logging.service.ChatLogService;
 import com.kairos.sports_atlas.service.ingestion.SportsIngestionService;

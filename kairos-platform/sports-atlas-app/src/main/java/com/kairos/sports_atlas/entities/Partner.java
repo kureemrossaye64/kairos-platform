@@ -2,9 +2,8 @@ package com.kairos.sports_atlas.entities;
 
 import org.locationtech.jts.geom.Point;
 
-import com.kairos.agentic_framework.conversational_ingestion.annotations.ConversationalEntity;
-import com.kairos.agentic_framework.conversational_ingestion.annotations.ConversationalField;
-import com.kairos.core.entity.BaseEntity;
+import com.kairos.agentic.conversational.annotations.ConversationalEntity;
+import com.kairos.agentic.conversational.annotations.ConversationalField;
 import com.kairos.sports_atlas.services.Manifestable;
 
 import jakarta.persistence.Column;
@@ -15,13 +14,14 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 // ...
 
 @Entity
 @Table(name = "partners")
-@Getter @Setter
+@Data
 @ConversationalEntity(
     name = "Partner",
     description = "A private company or individual offering a sports-related service."
@@ -81,5 +81,10 @@ public class Partner extends BaseEntity implements Manifestable {
         service.setOriginEntityId(this.getId());
         service.setOriginEntityType(Partner.class.getSimpleName());
         return service;
+    }
+    
+    
+    public String getTitle() {
+    	return name;
     }
 }

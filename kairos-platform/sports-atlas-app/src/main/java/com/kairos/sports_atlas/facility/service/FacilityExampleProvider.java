@@ -1,6 +1,6 @@
 package com.kairos.sports_atlas.facility.service;
 
-import com.kairos.agentic_framework.conversational_ingestion.ExampleProviderStrategy;
+import com.kairos.agentic.conversational.ExampleProviderStrategy;
 import com.kairos.sports_atlas.entities.Facility;
 import com.kairos.sports_atlas.repositories.FacilityRepository;
 

@@ -2,10 +2,8 @@ package com.kairos.ai_abstraction.service.impl;
 
 import java.util.concurrent.CompletableFuture;
 
-import org.springframework.stereotype.Service;
-
-import com.kairos.ai_abstraction.service.ChatLanguageModel;
-import com.kairos.ai_abstraction.service.ImageAnalysisService;
+import com.kairos.core.ai.ChatLanguageModel;
+import com.kairos.core.ai.ImageAnalysisService;
 
 import dev.langchain4j.data.message.AiMessage;
 import dev.langchain4j.data.message.ImageContent;
@@ -16,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @AllArgsConstructor
-@Service
 public class LLMImageAnalysisService implements ImageAnalysisService{
 	
 	private final ChatLanguageModel transcriptionModel;

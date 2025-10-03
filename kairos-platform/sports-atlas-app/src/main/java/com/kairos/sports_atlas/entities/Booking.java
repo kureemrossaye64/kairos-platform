@@ -2,11 +2,9 @@ package com.kairos.sports_atlas.entities;
 
 import java.time.LocalDateTime;
 
-import com.kairos.agentic_framework.conversational_ingestion.annotations.ConversationalField;
-import com.kairos.agentic_framework.transactional_chat.annotations.TransactionalEntity;
-import com.kairos.agentic_framework.transactional_chat.annotations.TransactionalField;
-import com.kairos.core.entity.BaseEntity;
-import com.kairos.core.entity.User; // Reuse the core User entity
+import com.kairos.agentic.conversational.annotations.ConversationalField;
+import com.kairos.agentic.transactional.annotations.TransactionalEntity;
+import com.kairos.agentic.transactional.annotations.TransactionalField;
 import com.kairos.sports_atlas.facility.service.ServiceFieldProcessor;
 import com.kairos.sports_atlas.facility.service.StartTimeFieldProcessor;
 
@@ -27,7 +25,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @TransactionalEntity(
 	    name = "Booking",
-	    description = "The process of reserving a bookable service like a sports facility for a specific time."
+	    description = "The process of reserving a bookable service like a facility or a service for a specific time. It can be any kind of booking like an appointment, meeting"
 	    ,instructions = ""
 	)
 public class Booking extends BaseEntity {
@@ -39,7 +37,7 @@ public class Booking extends BaseEntity {
 	@JoinColumn(name = "service_id", nullable = false)
 	@TransactionalField(
 	        description = "The specific service the user wants to book. It must be an service, approved facility. "
-	        		+ "You should use the tool `findServices` to get the exact service the user want to book.",
+	        		+ "You should use the tool `findServices` to get the exact service the user want to book. If the you already know for which service or facility etc the user is booking, you should not ask the question again, but ask confirmation from the user",
 	        processor = ServiceFieldProcessor.class
 	    )
 	private ServiceEntity service;
@@ -57,7 +55,7 @@ public class Booking extends BaseEntity {
 
 	@TransactionalField(
 	        description = "The duration of the booking in hours, e.g., 1 or 1.5 for 90 minutes. AI Instruction: You should understand the user input properly and convert it to minutes",
-	        processor = com.kairos.agentic_framework.conversational_ingestion.DefaultFieldProcessor.class // Use default for simple number
+	        processor = com.kairos.agentic.conversational.DefaultFieldProcessor.class // Use default for simple number
 	    )
 	private transient Double durationHours;
 

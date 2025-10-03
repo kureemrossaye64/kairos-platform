@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Stream;
 
+import com.kairos.core.search.VdbDocument;
+import com.kairos.core.search.VectorStoreService;
 import com.kairos.ingestion.pipeline.Sink;
-import com.kairos.vector_search.model.VdbDocument;
-import com.kairos.vector_search.service.VectorStoreService;
 
 import dev.langchain4j.data.segment.TextSegment;
 import lombok.RequiredArgsConstructor;

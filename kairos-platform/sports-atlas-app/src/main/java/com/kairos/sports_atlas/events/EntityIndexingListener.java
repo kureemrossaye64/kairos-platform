@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 
-import com.kairos.core.entity.BaseEntity;
-import com.kairos.search.annotation.Searchable;
-import com.kairos.vector_search.service.VectorStoreService;
+import com.kairos.core.search.Searchable;
+import com.kairos.core.search.VectorStoreService;
+import com.kairos.sports_atlas.entities.BaseEntity;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

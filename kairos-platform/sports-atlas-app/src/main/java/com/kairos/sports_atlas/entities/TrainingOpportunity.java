@@ -2,9 +2,8 @@ package com.kairos.sports_atlas.entities;
 
 import org.locationtech.jts.geom.Point;
 
-import com.kairos.agentic_framework.conversational_ingestion.annotations.ConversationalEntity;
-import com.kairos.agentic_framework.conversational_ingestion.annotations.ConversationalField;
-import com.kairos.core.entity.BaseEntity;
+import com.kairos.agentic.conversational.annotations.ConversationalEntity;
+import com.kairos.agentic.conversational.annotations.ConversationalField;
 import com.kairos.sports_atlas.services.Manifestable;
 
 import jakarta.persistence.Column;

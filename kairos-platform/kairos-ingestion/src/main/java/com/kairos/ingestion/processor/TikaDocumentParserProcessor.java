@@ -8,9 +8,9 @@ import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
 import org.springframework.stereotype.Component;
 
+import com.kairos.core.ingestion.SourceRecord;
+import com.kairos.core.storage.StorageService;
 import com.kairos.ingestion.pipeline.Processor;
-import com.kairos.ingestion.source.SourceRecord;
-import com.kairos.storage.StorageService;
 
 import dev.langchain4j.data.document.Document;
 import dev.langchain4j.data.document.Metadata;
@@ -36,7 +36,7 @@ public class TikaDocumentParserProcessor implements Processor<SourceRecord, Docu
     public Stream<Document> process(Stream<SourceRecord> requestStream) {
         log.info("Applying Tika document parser processor...");
         return requestStream.map(request -> {
-        	try (InputStream is = storageService.download(request.getGcsUri())) {
+        	try (InputStream is = storageService.download(request.getStorageUri())) {
                 // 1. Create the initial Metadata object from the user-provided manifest.
                 Metadata metadata = new Metadata(request.getMetadataManifest());
                 

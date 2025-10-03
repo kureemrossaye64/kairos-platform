@@ -4,9 +4,9 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.agentic_framework.conversational_ingestion.FieldProcessorStrategy;
-import com.kairos.core.entity.User;
-import com.kairos.core.repository.UserRepository;
+import com.kairos.agentic.conversational.FieldProcessorStrategy;
+import com.kairos.sports_atlas.entities.User;
+import com.kairos.sports_atlas.repositories.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 

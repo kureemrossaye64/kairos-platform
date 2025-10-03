@@ -6,14 +6,14 @@ import org.locationtech.jts.geom.Point;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kairos.core.entity.User;
-import com.kairos.core.repository.UserRepository;
 import com.kairos.sports_atlas.common.GenericCrudService;
 import com.kairos.sports_atlas.common.GeocodingService;
 import com.kairos.sports_atlas.entities.Activity;
 import com.kairos.sports_atlas.entities.PlayerLfg;
+import com.kairos.sports_atlas.entities.User;
 import com.kairos.sports_atlas.repositories.ActivityRepository;
 import com.kairos.sports_atlas.repositories.PlayerLfgRepository;
+import com.kairos.sports_atlas.repositories.UserRepository;
 
 import lombok.extern.slf4j.Slf4j;
 

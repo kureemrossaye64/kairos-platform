@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.kairos.core.entity.BaseEntity;
+import com.kairos.sports_atlas.entities.BaseEntity;
 import com.kairos.sports_atlas.events.EntityChangeEvent;
 
 /**

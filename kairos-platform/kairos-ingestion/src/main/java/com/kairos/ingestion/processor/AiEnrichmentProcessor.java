@@ -4,8 +4,8 @@ import java.util.stream.Stream;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.ai_abstraction.service.TextAnalysisService;
-import com.kairos.ai_abstraction.service.TextAnalysisService.TextAnalysisResult;
+import com.kairos.core.ai.TextAnalysisService;
+import com.kairos.core.ai.TextAnalysisService.TextAnalysisResult;
 import com.kairos.ingestion.pipeline.Processor;
 
 import dev.langchain4j.data.document.Metadata;

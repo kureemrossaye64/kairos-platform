@@ -7,22 +7,23 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import com.kairos.crawler.models.DocumentExtraction;
+import com.kairos.core.crawler.CrawlerService;
+import com.kairos.core.crawler.DocumentExtraction;
+import com.kairos.core.crawler.UrlToCrawl;
+import com.kairos.crawler.CrawlController.WebCrawlerFactory;
+import com.kairos.crawler.fetcher.PageFetcher;
+import com.kairos.crawler.robotstxt.RobotstxtConfig;
+import com.kairos.crawler.robotstxt.RobotstxtServer;
 import com.kairos.crawler.spider.KairoSpider;
+import com.kairos.crawler.util.Util;
 
-import edu.uci.ics.crawler4j.crawler.CrawlConfig;
-import edu.uci.ics.crawler4j.crawler.CrawlController;
-import edu.uci.ics.crawler4j.crawler.CrawlController.WebCrawlerFactory;
-import edu.uci.ics.crawler4j.fetcher.PageFetcher;
-import edu.uci.ics.crawler4j.robotstxt.RobotstxtConfig;
-import edu.uci.ics.crawler4j.robotstxt.RobotstxtServer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class WebCrawlerService {
+public class WebCrawlerService implements CrawlerService{
 
     @Value("${kairos.crawler.user-agent}")
     private String userAgent;
@@ -30,7 +31,9 @@ public class WebCrawlerService {
     @Value("${kairos.crawler.crawl-delay-ms}")
     private int crawlDelayMs;
 
-    public List<DocumentExtraction> executeCrawl(String startUrl, int maxDepth) {
+    public List<DocumentExtraction> executeCrawl(UrlToCrawl toCrawl) {
+    	String startUrl = toCrawl.url();
+    	int maxDepth = toCrawl.depth();
         log.info("Executing Crawler4j crawl for URL: {} with max depth: {}", startUrl, maxDepth);
 
         // A temporary folder for the crawl's state data.
@@ -40,13 +43,13 @@ public class WebCrawlerService {
         config.setMaxDepthOfCrawling(maxDepth);
         config.setPolitenessDelay(crawlDelayMs);
         config.setUserAgentString(userAgent);
-
-        // Instantiate the controller for this crawl.
-        PageFetcher pageFetcher = new PageFetcher(config);
-        RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
-        RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
-        
         try {
+        // Instantiate the controller for this crawl.
+	        PageFetcher pageFetcher = new PageFetcher(config);
+	        RobotstxtConfig robotstxtConfig = new RobotstxtConfig();
+	        RobotstxtServer robotstxtServer = new RobotstxtServer(robotstxtConfig, pageFetcher);
+        
+        
             CrawlController controller = new CrawlController(config, pageFetcher, robotstxtServer);
             controller.addSeed(startUrl);
 
@@ -67,4 +70,9 @@ public class WebCrawlerService {
             throw new RuntimeException("Crawl failed", e);
         }
     }
+
+	@Override
+	public boolean supports(UrlToCrawl urlToCrawl) {
+		return !Util.isYouTubeUrl(urlToCrawl.url());
+	}
 }

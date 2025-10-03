@@ -1,18 +1,11 @@
 package com.kairos.sports_atlas.repositories;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
-
-import org.locationtech.jts.geom.Point;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import com.kairos.sports_atlas.entities.Facility;
 
-public interface FacilityRepository extends JpaRepository<Facility, UUID> {
+public interface FacilityRepository extends ManifestableRepository<Facility> {
 	// List<Facility> findByTypeAndLocation(String type, String location);
 
 	/*

@@ -1,8 +1,9 @@
 package com.kairos.sports_atlas.events;
 
-import com.kairos.agentic_framework.feedback.FeedbackTriggerEvent;
 import lombok.Getter;
 import java.util.UUID;
+
+import com.kairos.sports_atlas.feedback.FeedbackTriggerEvent;
 
 @Getter
 public class BookingCompletedEvent implements FeedbackTriggerEvent {

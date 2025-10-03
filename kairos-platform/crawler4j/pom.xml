@@ -1,0 +1,102 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.kairos</groupId>
+		<artifactId>kairos-platform</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>kairos-crawler</artifactId>
+	<name>KAIROS - Crawler</name>
+	<description>Abstracts interactions with external AI providers (e.g., Google
+		Vertex AI).</description>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+
+		<!-- Dependency Versions -->
+		<slf4j.version>2.0.17</slf4j.version>
+		<httpclient.version>4.5.7</httpclient.version>
+		<sleepycat.je.version>18.3.12</sleepycat.je.version>
+		<tika.version>3.2.2</tika.version>
+		<url-detector.version>0.1.20</url-detector.version>
+		<guava.version>27.0.1-jre</guava.version>
+		<public-suffix-list.version>2.2.0</public-suffix-list.version>
+		<logback.version>1.2.3</logback.version>
+		<junit.version>4.12</junit.version> <!-- Note: 4.2 is very old, updated
+		to a more common 4.12 -->
+		<wiremock.version>2.21.0</wiremock.version>
+		<groovy.version>2.5.6</groovy.version>
+		<spock.version>1.2-groovy-2.5</spock.version>
+	</properties>
+
+	<dependencies>
+		<!-- Dependency on our own core module -->
+		<dependency>
+			<groupId>com.sleepycat</groupId>
+			<artifactId>je</artifactId>
+			<version>${sleepycat.je.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			</dependency>
+			<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-core</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parser-pdf-module</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+
+		<!--
+		https://mvnrepository.com/artifact/org.apache.tika/tika-parser-html-module -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parser-html-module</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+		<!--
+		https://mvnrepository.com/artifact/org.apache.tika/tika-parser-miscoffice-module -->
+		<dependency>
+			<groupId>org.apache.tika</groupId>
+			<artifactId>tika-parser-miscoffice-module</artifactId>
+			<version>3.2.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<!-- Spring Boot Maven Plugin to create an executable JAR -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

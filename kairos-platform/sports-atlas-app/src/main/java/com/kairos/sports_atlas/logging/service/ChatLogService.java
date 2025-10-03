@@ -1,9 +1,9 @@
 package com.kairos.sports_atlas.logging.service;
 
-import com.kairos.core.entity.User;
-import com.kairos.core.repository.UserRepository;
 import com.kairos.sports_atlas.entities.ChatLog;
+import com.kairos.sports_atlas.entities.User;
 import com.kairos.sports_atlas.repositories.ChatLogRepository;
+import com.kairos.sports_atlas.repositories.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

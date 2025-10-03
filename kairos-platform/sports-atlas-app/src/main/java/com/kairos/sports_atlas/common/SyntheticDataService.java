@@ -11,41 +11,39 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-import org.springframework.context.annotation.Profile;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.github.javafaker.Faker;
-import com.kairos.core.entity.User;
-import com.kairos.core.repository.UserRepository;
-import com.kairos.crawler.entities.CrawlJob;
-import com.kairos.crawler.repositories.CrawlJobRepository;
+import com.kairos.core.crawler.CrawlStatus;
+import com.kairos.core.search.VectorStoreService;
 import com.kairos.sports_atlas.entities.Activity;
 import com.kairos.sports_atlas.entities.Athlete;
 import com.kairos.sports_atlas.entities.Facility;
+import com.kairos.sports_atlas.entities.JpaCrawlJob;
 import com.kairos.sports_atlas.entities.Partner;
 import com.kairos.sports_atlas.entities.PerformanceRecord;
 import com.kairos.sports_atlas.entities.PlayerLfg;
 import com.kairos.sports_atlas.entities.ServiceEntity;
 import com.kairos.sports_atlas.entities.TrainingOpportunity;
+import com.kairos.sports_atlas.entities.User;
 import com.kairos.sports_atlas.facility.service.ActivityService;
 import com.kairos.sports_atlas.facility.service.ApprovalService;
-import com.kairos.sports_atlas.facility.service.BookingService;
 import com.kairos.sports_atlas.facility.service.FacilityService;
 import com.kairos.sports_atlas.facility.service.ServiceEntityService;
 import com.kairos.sports_atlas.lfg.service.LfgService;
 import com.kairos.sports_atlas.partner.service.PartnerService;
+import com.kairos.sports_atlas.repositories.CrawlJobRepository;
+import com.kairos.sports_atlas.repositories.UserRepository;
 import com.kairos.sports_atlas.services.AthleteService;
 import com.kairos.sports_atlas.services.PerformanceRecordService;
 import com.kairos.sports_atlas.training.service.TrainingOpportunityService;
-import com.kairos.vector_search.service.VectorStoreService;
 
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
-@Profile("dev") // This service will only run when the 'dev' Spring profile is active
 @RequiredArgsConstructor
 @Slf4j
 public class SyntheticDataService {
@@ -55,7 +53,6 @@ public class SyntheticDataService {
 	private final PerformanceRecordService performanceRecordRepository;
 	private final GeocodingService geocodingService;
 	private final ActivityService activityRepository;
-	private final BookingService bookingRepository;
 	private final UserRepository userRepository;
 	private final LfgService playerLfgRepository;
 	private final PasswordEncoder passwordEncoder;
@@ -72,7 +69,7 @@ public class SyntheticDataService {
 	public void generateData() {
 		log.warn("DEV PROFILE ACTIVE: Generating synthetic data...");
 		
-		if(crawljobRepository.count() ==1) {
+		if(crawljobRepository.count() ==0) {
 			createCrawlJob();
 		}
 		
@@ -112,10 +109,11 @@ public class SyntheticDataService {
 	}
 	
 	private void createCrawlJob() {
-		CrawlJob j = new CrawlJob();
+		JpaCrawlJob j = new JpaCrawlJob();
 		j.setMaxDepth(10);
-		j.setName("mauritiusnow");
-		j.setSeedUrls(List.of("https://mauritiusnow.com"));
+		j.setName("wikipedia");
+		j.setStatus(CrawlStatus.ACTIVE);
+		j.setSeedUrls(List.of("https://en.wikipedia.org/wiki/Mauritius"));
 		crawljobRepository.save(j);
 	}
 
@@ -197,7 +195,9 @@ public class SyntheticDataService {
 
 		for (int i = 0; i < 50; i++) {
 			// Create the Athlete
-			String fullName = faker.name().fullName();
+			String firstName = faker.name().firstName();
+			String lastName = faker.name().lastName();
+			String fullName = lastName + " " + firstName;
 			Athlete athlete = new Athlete(fullName,
 					faker.date().birthday(14, 18).toInstant().atZone(ZoneId.systemDefault()).toLocalDate(),
 					i % 2 == 0 ? "Athletics" : "Swimming");
@@ -207,10 +207,28 @@ public class SyntheticDataService {
 			User user = new User();
 			user.setUsername(fullName.toLowerCase().replace(" ", ".") + "." + i); // Ensure username is unique
 			user.setPassword(passwordEncoder.encode("password123")); // Use a default password
+			user.setFirstName(firstName);
+			user.setLastName(lastName);
 			user.setRole("ROLE_USER");
 			users.add(user);
 		}
 		athleteRepository.saveAll(athletes);
+		
+		User kureem = new User();
+		kureem.setUsername("kureem"); // Ensure username is unique
+		kureem.setPassword(passwordEncoder.encode("kureem")); // Use a default password
+		kureem.setFirstName("Rossaye");
+		kureem.setLastName("Kureem");
+		kureem.setRole("ROLE_ADMIN");
+		
+		User rana = new User();
+		rana.setUsername("rana"); // Ensure username is unique
+		rana.setPassword(passwordEncoder.encode("rana")); // Use a default password
+		rana.setFirstName("Rana");
+		rana.setLastName("Ramjaun");
+		rana.setRole("ROLE_ADMIN");
+		users.add(kureem);
+		users.add(rana);
 		return userRepository.saveAll(users);
 	}
 

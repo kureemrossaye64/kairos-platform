@@ -4,15 +4,15 @@ import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.agentic_framework.conversational_ingestion.FormCompletionStrategy;
-import com.kairos.agentic_framework.conversational_ingestion.form.Form;
-import com.kairos.agentic_framework.transactional_chat.TransactionCompletionStrategy;
-import com.kairos.agentic_framework.transactional_chat.TransactionContext;
-import com.kairos.core.entity.User;
-import com.kairos.core.repository.UserRepository;
+import com.kairos.agentic.conversational.FormCompletionStrategy;
+import com.kairos.agentic.form.Form;
+import com.kairos.agentic.transactional.TransactionCompletionStrategy;
+import com.kairos.agentic.transactional.TransactionContext;
 import com.kairos.sports_atlas.entities.Booking;
 import com.kairos.sports_atlas.entities.Facility;
 import com.kairos.sports_atlas.entities.ServiceEntity;
+import com.kairos.sports_atlas.entities.User;
+import com.kairos.sports_atlas.repositories.UserRepository;
 import com.kairos.sports_atlas.util.Util;
 
 import lombok.RequiredArgsConstructor;

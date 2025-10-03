@@ -11,7 +11,6 @@ public class ActivityService extends GenericCrudService<Activity, ActivityReposi
 
 	protected ActivityService(ActivityRepository repository) {
 		super(repository);
-		// TODO Auto-generated constructor stub
 	}
 
 }

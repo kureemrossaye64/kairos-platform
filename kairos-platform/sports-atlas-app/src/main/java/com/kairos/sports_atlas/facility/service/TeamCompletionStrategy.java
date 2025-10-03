@@ -4,12 +4,12 @@ import java.util.Set;
 
 import org.springframework.stereotype.Component;
 
-import com.kairos.agentic_framework.transactional_chat.TransactionCompletionStrategy;
-import com.kairos.agentic_framework.transactional_chat.TransactionContext;
-import com.kairos.core.entity.User;
+import com.kairos.agentic.transactional.TransactionCompletionStrategy;
+import com.kairos.agentic.transactional.TransactionContext;
 import com.kairos.notification.NotificationService;
 import com.kairos.sports_atlas.entities.Activity;
 import com.kairos.sports_atlas.entities.Team;
+import com.kairos.sports_atlas.entities.User;
 
 import lombok.RequiredArgsConstructor;
 

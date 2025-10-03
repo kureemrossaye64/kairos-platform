@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.kairos.agentic_framework.tools.KairosTool;
+import com.kairos.agentic.tools.KairosTool;
 import com.kairos.sports_atlas.entities.Facility;
 import com.kairos.sports_atlas.facility.service.FacilityService;
 

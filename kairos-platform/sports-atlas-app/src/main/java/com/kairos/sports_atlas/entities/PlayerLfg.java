@@ -2,9 +2,6 @@ package com.kairos.sports_atlas.entities;
 
 import org.locationtech.jts.geom.Point;
 
-import com.kairos.core.entity.BaseEntity;
-import com.kairos.core.entity.User;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

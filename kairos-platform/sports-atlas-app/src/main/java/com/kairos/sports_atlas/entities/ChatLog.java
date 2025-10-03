@@ -1,7 +1,5 @@
 package com.kairos.sports_atlas.entities;
 
-import com.kairos.core.entity.BaseEntity;
-import com.kairos.core.entity.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
