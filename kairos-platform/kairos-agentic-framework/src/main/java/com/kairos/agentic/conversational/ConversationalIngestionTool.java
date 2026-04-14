@@ -1,7 +1,7 @@
 package com.kairos.agentic.conversational;
 
 import com.kairos.agentic.tools.KairosTool;
-import com.kairos.core.agentic.ConversationIdProvider;
+import com.kairos.core.agentic.ConversationContexProvider;
 
 import dev.langchain4j.agent.tool.P;
 import dev.langchain4j.agent.tool.Tool;
@@ -15,7 +15,7 @@ public class ConversationalIngestionTool  {
 
 	private final GenericIngestionService ingestionService;
 
-	private final ConversationIdProvider conversationIdProvider;
+	private final ConversationContexProvider conversationIdProvider;
 
 	// Define a constant for our signal prefix.
 	public static final String INGESTION_SIGNAL = "KAYA_INGESTION_FLOW::";

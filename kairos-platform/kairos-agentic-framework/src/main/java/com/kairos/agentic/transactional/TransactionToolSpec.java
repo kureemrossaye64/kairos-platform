@@ -20,6 +20,9 @@ public class TransactionToolSpec extends AbstractSpecProvider {
 	public String getEnrichedDescription() {
 		Reflections reflections = new Reflections("com.kairos");
 		Set<Class<?>> entities = reflections.getTypesAnnotatedWith(TransactionalEntity.class);
+		if(entities.isEmpty()) {
+			return null;
+		}
 		String dynamicEntityList = entities.stream().map(cls -> {
 			TransactionalEntity annotation = cls.getAnnotation(TransactionalEntity.class);
 			return String.format("Transaction: '%s' Description: %s\r\n", annotation.name(), annotation.description());

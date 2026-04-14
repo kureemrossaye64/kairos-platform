@@ -41,6 +41,9 @@ public abstract class AbstractSpecProvider  {
 	public Map<ToolSpecification, ToolExecutor> getSpecification() {
 		// 1. Scan the classpath to find all conversationally-enabled entities.
 		String description = getEnrichedDescription();
+		if(description == null) {
+			return new HashMap<ToolSpecification, ToolExecutor>();
+		}
 
 		log.info("Dynamically discovered conversational entities: {}", description);
 

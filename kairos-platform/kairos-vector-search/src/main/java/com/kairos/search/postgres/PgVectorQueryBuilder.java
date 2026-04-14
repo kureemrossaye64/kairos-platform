@@ -31,6 +31,52 @@ public class PgVectorQueryBuilder {
         private final String sql;
         private final Object[] params;
     }
+    
+    
+    public PreparedQuery buildHybridSearchQuery(SearchQuery searchQuery, Class<?> entityClass, EmbeddingModel embeddingModel, int limit) {
+    	String tableName = getTableName(entityClass);
+        List<Object> params = new ArrayList<>();
+
+        // We use a Common Table Expression (CTE) to perform Hybrid Ranking
+        // Vector Weight: 0.7, Keyword Weight: 0.3
+        StringBuilder sql = new StringBuilder();
+        
+        // 1. Generate Embedding
+        float[] queryVector = embeddingModel.getModel().embed(searchQuery.getTextQuery()).content().vector();
+
+        // FIX: Used 'embedding_id' instead of 'id'
+        // FIX: Used 'embedding' instead of 'text_embedding'
+        // FIX: Added '::vector' cast to the parameter
+        sql.append("WITH vector_search AS ( ")
+           .append("  SELECT embedding_id, 1 - (embedding <=> ?::vector) AS vector_score ") // Cosine similarity approx
+           .append("  FROM ").append(tableName)
+           .append("  ORDER BY vector_score DESC LIMIT ? ")
+           .append("), ")
+           .append("keyword_search AS ( ")
+           .append("  SELECT embedding_id, ts_rank_cd(content_tsvector, plainto_tsquery('english', ?)) AS keyword_score ")
+           .append("  FROM ").append(tableName)
+           .append("  WHERE content_tsvector @@ plainto_tsquery('english', ?) ")
+           .append("  LIMIT ? ")
+           .append(") ")
+           .append("SELECT ")
+           // We alias the final ID as 'id' so the RowMapper works easily
+           .append("  COALESCE(v.embedding_id, k.embedding_id) as id, ")
+           .append("  COALESCE(v.vector_score, 0) * 0.7 + COALESCE(k.keyword_score, 0) * 0.3 as final_score ")
+           .append("FROM vector_search v ")
+           .append("FULL OUTER JOIN keyword_search k ON v.embedding_id = k.embedding_id ")
+           .append("ORDER BY final_score DESC ")
+           .append("LIMIT ?");
+
+        // Params mapping
+        params.add(new PGvector(queryVector)); // Vector param
+        params.add(limit * 3);                 // Vector limit (fetch more candidates)
+        params.add(searchQuery.getTextQuery()); // Keyword param 1
+        params.add(searchQuery.getTextQuery()); // Keyword param 2
+        params.add(limit * 3);                 // Keyword limit
+        params.add(limit);                     // Final limit
+
+        return new PreparedQuery(sql.toString(), params.toArray());
+    }
 
     /**
      * Builds a hybrid vector and geospatial search query.
@@ -68,7 +114,7 @@ public class PgVectorQueryBuilder {
         // 2. Build Vector Similarity Ranking (ORDER BY clause)
         if (StringUtils.hasText(searchQuery.getTextQuery())) {
             // Embed the query text to get the search vector
-            float[] queryVector = embeddingModel.embed(searchQuery.getTextQuery()).content().vector();
+            float[] queryVector = embeddingModel.getModel().embed(searchQuery.getTextQuery()).content().vector();
             // The <-> operator from pgvector calculates L2 distance.
             sql.append(" ORDER BY text_embedding <-> ?");
             params.add(new PGvector(queryVector));

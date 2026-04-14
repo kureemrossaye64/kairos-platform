@@ -2,7 +2,7 @@ package com.kairos.agentic.transactional;
 
 import com.kairos.agentic.conversational.FieldProcessorStrategy.ProcessingResult;
 import com.kairos.agentic.tools.KairosTool;
-import com.kairos.core.agentic.ConversationIdProvider;
+import com.kairos.core.agentic.ConversationContexProvider;
 
 import dev.langchain4j.agent.tool.P;
 import dev.langchain4j.agent.tool.Tool;
@@ -18,7 +18,7 @@ public class TransactionalTool {
 
     private final TransactionService transactionService;
     
-    private final ConversationIdProvider conversationIdProvider;
+    private final ConversationContexProvider conversationIdProvider;
 
     
     //@Tool("Starts a complex, multi-step conversational process, such as booking a facility. This provides the AI with the full context of information needed to complete the task.")

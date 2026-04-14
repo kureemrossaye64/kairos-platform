@@ -16,18 +16,9 @@
 			<groupId>com.kairos</groupId>
 			<artifactId>kairos-core</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.kairos</groupId>
-			<artifactId>kairos-ai-abstraction</artifactId>
-		</dependency>
+		
 
-		<!-- Spring Boot Starter for JPA -->
-
-		<dependency>
-			<groupId>dev.langchain4j</groupId>
-			<artifactId>langchain4j</artifactId>
-		</dependency>
-
+		
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
@@ -38,11 +29,7 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 		</dependency>
-		<!-- Required for the OpenSearch client -->
-		<dependency>
-			<groupId>jakarta.json</groupId>
-			<artifactId>jakarta.json-api</artifactId>
-		</dependency>
+
 
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
@@ -68,37 +55,44 @@
 			<version>0.10.2</version>
 		</dependency>
 
-		<!-- JTS Core for Geo types, needed by hibernate-spatial in consuming
-		modules -->
-
-
-		<!-- Spring Boot configuration processor for type-safe properties -->
-
-
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
 		</dependency>
 
-		<!-- Spring Boot JDBC for JdbcTemplate -->
+		<!-- 2. Option: Qdrant (Lightweight) -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-qdrant</artifactId>
+			<optional>true</optional>
 		</dependency>
 
-		<!-- LangChain4j PGVector Integration -->
+		<!-- 3. Option: Postgres (Heavy) -->
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j-pgvector</artifactId>
-
+			<optional>true</optional>
 		</dependency>
+
+		<!-- JDBC for Postgres/Hybrid logic -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<optional>true</optional>
+		</dependency>
+
 
 		<!-- pgvector JDBC wrapper -->
 		<dependency>
 			<groupId>com.pgvector</groupId>
 			<artifactId>pgvector</artifactId>
 			<version>0.1.6</version>
+			<optional>true</optional>
 		</dependency>
 
 		<!--

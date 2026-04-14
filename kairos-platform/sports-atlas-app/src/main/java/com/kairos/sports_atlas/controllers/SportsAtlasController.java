@@ -1,6 +1,9 @@
 package com.kairos.sports_atlas.controllers;
 
+import static com.kairos.sports_atlas.util.Util.getConversationId;
+
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +20,6 @@ import com.kairos.sports_atlas.service.ingestion.SportsIngestionService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import static com.kairos.sports_atlas.util.Util.getConversationId;
 record ChatRequest(String message) {}
 
 @RestController
@@ -30,16 +32,18 @@ public class SportsAtlasController {
     private final SportsIngestionService ingestionService;
     private final SystemPromptService systemPromptService;
     private final ChatLogService chatLogService;
-    private AiAgent atlasAgent;
+    private String kayaPrompt;
 
     @PostConstruct
     public void init() {
-    	String kayaPrompt = systemPromptService.getKayaSystemPrompt();
-     	this.atlasAgent = agentFactory.createAgent(kayaPrompt);
+    	 kayaPrompt = systemPromptService.getKayaSystemPrompt();
+     	
     }
 
-    @PostMapping("/chat")
-    public String chatWithAtlas(@RequestBody ChatRequest request) {
+    @PostMapping("/chat/{sessionId}")
+    public String chatWithAtlas(@PathVariable String sessionId,@RequestBody ChatRequest request) {
+    	
+    	AiAgent atlasAgent = agentFactory.createAgent(sessionId,kayaPrompt);
         String agentResponse = atlasAgent.chat(request.message());
         try {
             chatLogService.logConversation(getConversationId(), request.message(), agentResponse);

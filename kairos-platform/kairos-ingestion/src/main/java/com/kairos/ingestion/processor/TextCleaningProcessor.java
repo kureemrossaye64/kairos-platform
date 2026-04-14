@@ -1,13 +1,12 @@
 package com.kairos.ingestion.processor;
 
-import com.kairos.ingestion.pipeline.Processor;
-import dev.langchain4j.data.document.Document;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
-
 import java.util.stream.Stream;
 
-@Component
+import com.kairos.ingestion.pipeline.Processor;
+
+import dev.langchain4j.data.document.Document;
+import lombok.extern.slf4j.Slf4j;
+
 @Slf4j
 public class TextCleaningProcessor implements Processor<Document, Document> {
 

@@ -13,6 +13,9 @@
 	<name>Sports Atlas Application</name>
 	<description>The main application for the Atlas Sportif talent platform.</description>
 
+	<properties>
+		<jjwt.version>0.13.0</jjwt.version>
+	</properties>
 	<dependencies>
 		<!-- KAIROS Foundation Dependencies -->
 		<dependency>

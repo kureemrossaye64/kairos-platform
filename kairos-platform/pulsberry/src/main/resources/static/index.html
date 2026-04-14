@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-gray-900">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaya | Food Safety AI</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Tailwind Config for Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#10b981', // Emerald green for food safety
+                            600: '#059669',
+                            900: '#064e3b',
+                        },
+                        chat: {
+                            user: '#374151',
+                            ai: '#4b5563'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #111827; }
+        ::-webkit-scrollbar-thumb { background: #374151; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #4b5563; }
+        
+        .markdown-body ul { list-style-type: disc; margin-left: 1.5rem; }
+        .markdown-body ol { list-style-type: decimal; margin-left: 1.5rem; }
+        .markdown-body h1 { font-size: 1.5rem; font-weight: bold; margin-top: 1rem; margin-bottom: 0.5rem; }
+        .markdown-body h2 { font-size: 1.25rem; font-weight: bold; margin-top: 1rem; margin-bottom: 0.5rem; }
+        .markdown-body p { margin-bottom: 0.75rem; }
+        .markdown-body code { background-color: #1f2937; padding: 2px 4px; border-radius: 4px; color: #e5e7eb; }
+        .markdown-body pre { background-color: #111827; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="h-full text-gray-100 font-sans antialiased overflow-hidden">
+
+    <!-- LOGIN OVERLAY -->
+    <div id="login-screen" class="fixed inset-0 z-50 bg-gray-900 flex flex-col justify-center items-center">
+        <div class="bg-gray-800 p-8 rounded-xl shadow-2xl w-full max-w-md border border-gray-700">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-brand-500 mb-2">Kaya AI</h1>
+                <p class="text-gray-400">Food Safety & Hygiene Compliance</p>
+            </div>
+            <form id="login-form" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-300">Username</label>
+                    <input type="text" id="username" class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="admin">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-300">Password</label>
+                    <input type="password" id="password" class="mt-1 block w-full bg-gray-700 border border-gray-600 rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="••••••••">
+                </div>
+                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brand-600 hover:bg-brand-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-colors">
+                    Sign In
+                </button>
+                <p id="login-error" class="text-red-500 text-sm text-center hidden">Invalid credentials</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- MAIN APP LAYOUT -->
+    <div id="app-layout" class="flex h-full hidden">
+        
+        <!-- SIDEBAR -->
+        <div class="w-64 bg-gray-800 border-r border-gray-700 flex flex-col flex-shrink-0">
+            <div class="p-4 border-b border-gray-700 flex justify-between items-center">
+                <span class="font-bold text-lg tracking-wide">History</span>
+                <button id="new-chat-btn" class="p-2 hover:bg-gray-700 rounded-lg text-brand-500 transition-colors" title="New Chat">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                    </svg>
+                </button>
+            </div>
+            <div id="session-list" class="flex-1 overflow-y-auto p-2 space-y-1">
+                <!-- Sessions injected here -->
+            </div>
+            <div class="p-4 border-t border-gray-700">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center font-bold">U</div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-medium truncate" id="user-display">User</p>
+                    </div>
+                    <button id="logout-btn" class="text-gray-400 hover:text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CHAT AREA -->
+        <div class="flex-1 flex flex-col bg-gray-900">
+            <!-- Header (Mobile/Small screens) -->
+            <div class="md:hidden p-4 border-b border-gray-700 bg-gray-800">
+                Kaya AI
+            </div>
+
+            <!-- Messages Container -->
+            <div id="chat-container" class="flex-1 overflow-y-auto p-4 space-y-6 scroll-smooth">
+                <div class="h-full flex flex-col justify-center items-center text-gray-500 opacity-50" id="empty-state">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <p class="text-lg font-medium">Select a session or start a new audit</p>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="p-4 border-t border-gray-700 bg-gray-800">
+                <div class="max-w-4xl mx-auto relative">
+                    <form id="chat-form" class="relative">
+                        <textarea id="message-input" rows="1" class="w-full bg-gray-700 text-white rounded-xl pl-4 pr-12 py-3 focus:outline-none focus:ring-2 focus:ring-brand-500 resize-none overflow-hidden" placeholder="Ask Kaya about hygiene compliance..."></textarea>
+                        <button type="submit" id="send-btn" class="absolute right-2 bottom-2 p-1.5 bg-brand-600 rounded-lg hover:bg-brand-500 text-white disabled:opacity-50 disabled:cursor-not-allowed transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                            </svg>
+                        </button>
+                    </form>
+                    <p class="text-xs text-gray-500 text-center mt-2">AI can make mistakes. Verify critical compliance codes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        const API_BASE = '/api';
+        let authToken = localStorage.getItem('jwt_token');
+        let currentSessionId = null;
+
+        // --- DOM Elements ---
+        const loginScreen = document.getElementById('login-screen');
+        const appLayout = document.getElementById('app-layout');
+        const loginForm = document.getElementById('login-form');
+        const sessionList = document.getElementById('session-list');
+        const chatContainer = document.getElementById('chat-container');
+        const chatForm = document.getElementById('chat-form');
+        const messageInput = document.getElementById('message-input');
+        const emptyState = document.getElementById('empty-state');
+        const sendBtn = document.getElementById('send-btn');
+
+        // --- Init ---
+        if (authToken) {
+            showApp();
+        }
+
+        // --- Event Listeners ---
+        loginForm.addEventListener('submit', handleLogin);
+        document.getElementById('logout-btn').addEventListener('click', handleLogout);
+        document.getElementById('new-chat-btn').addEventListener('click', createNewSession);
+        
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            sendMessage();
+        });
+
+        // Auto-resize textarea
+        messageInput.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+            if(this.value === '') this.style.height = 'auto';
+        });
+
+        // Handle Enter key to submit
+        messageInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // --- Auth Functions ---
+        async function handleLogin(e) {
+            e.preventDefault();
+            const u = document.getElementById('username').value;
+            const p = document.getElementById('password').value;
+
+            try {
+                const res = await fetch(`${API_BASE}/v1/auth/login`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username: u, password: p })
+                });
+
+                if (res.ok) {
+                    const data = await res.json();
+                    authToken = data.token;
+                    localStorage.setItem('jwt_token', authToken);
+                    document.getElementById('user-display').innerText = data.username;
+                    showApp();
+                } else {
+                    document.getElementById('login-error').classList.remove('hidden');
+                }
+            } catch (err) {
+                console.error(err);
+                document.getElementById('login-error').innerText = "Network Error";
+                document.getElementById('login-error').classList.remove('hidden');
+            }
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('jwt_token');
+            location.reload();
+        }
+
+        function showApp() {
+            loginScreen.classList.add('hidden');
+            appLayout.classList.remove('hidden');
+            loadSessions();
+        }
+
+        // --- Session Functions ---
+        async function loadSessions() {
+            try {
+                const res = await authenticatedFetch(`${API_BASE}/assistant/sessions`);
+                const sessions = await res.json();
+                renderSessionList(sessions);
+            } catch (err) {
+                console.error("Failed to load sessions", err);
+            }
+        }
+
+        function renderSessionList(sessions) {
+            sessionList.innerHTML = '';
+            sessions.forEach(session => {
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left px-3 py-2 rounded-md text-sm truncate transition-colors ${session.id === currentSessionId ? 'bg-gray-700 text-white' : 'text-gray-400 hover:bg-gray-700 hover:text-white'}`;
+                btn.innerText = session.title || 'Untitled Chat';
+                btn.onclick = () => loadSession(session.id);
+                sessionList.appendChild(btn);
+            });
+        }
+
+        async function createNewSession() {
+            const title = prompt("Enter a title for the new audit/chat:", "Hygiene Audit " + new Date().toLocaleDateString());
+            if (!title) return;
+
+            try {
+                const res = await authenticatedFetch(`${API_BASE}/assistant/session`, {
+                    method: 'POST',
+                    body: JSON.stringify({ title: title })
+                });
+                const session = await res.json();
+                loadSessions(); // Refresh list
+                loadSession(session.id);
+            } catch (err) {
+                alert("Failed to create session");
+            }
+        }
+
+        async function loadSession(sessionId) {
+            currentSessionId = sessionId;
+            loadSessions(); // Re-render sidebar to update active state
+            
+            chatContainer.innerHTML = ''; // Clear chat
+            emptyState.style.display = 'none';
+
+            try {
+                const res = await authenticatedFetch(`${API_BASE}/assistant/session/${sessionId}/messages`);
+                const messages = await res.json();
+                
+                messages.forEach(msg => {
+                    // Map backend types to UI types
+                    // ChatMessageType: USER, AI, SYSTEM
+                    if (msg.type === 'USER') appendMessage('user', msg.content);
+                    else if (msg.type === 'AI') appendMessage('ai', msg.content);
+                    // Ignore SYSTEM messages in UI
+                });
+                
+                scrollToBottom();
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        // --- Chat Functions ---
+        async function sendMessage() {
+            const text = messageInput.value.trim();
+            if (!text) return;
+            if (!currentSessionId) {
+                alert("Please select or create a session first.");
+                return;
+            }
+
+            // UI Optimistic Update
+            messageInput.value = '';
+            messageInput.style.height = 'auto';
+            appendMessage('user', text);
+            scrollToBottom();
+
+            // Show Loading State
+            const loadingId = appendLoading();
+            scrollToBottom();
+            
+            // Disable input
+            messageInput.disabled = true;
+            sendBtn.disabled = true;
+
+            try {
+                const res = await authenticatedFetch(`${API_BASE}/assistant/chat/${currentSessionId}`, {
+                    method: 'POST',
+                    body: JSON.stringify({ message: text })
+                });
+                
+                const data = await res.text();
+                
+                // Remove loading
+                removeLoading(loadingId);
+                
+                // Show Response
+                appendMessage('ai', data);
+                scrollToBottom();
+
+            } catch (err) {
+                removeLoading(loadingId);
+                appendMessage('ai', "**Error:** Failed to reach Kaya. Please try again.");
+            } finally {
+                messageInput.disabled = false;
+                sendBtn.disabled = false;
+                messageInput.focus();
+            }
+        }
+
+        function appendMessage(role, text_) {
+        	
+        	var text = text_;
+        	
+        	try{
+        		var parsed = JSON.parse(text_);
+        		if(parsed.message){
+        			text = parsed.message;
+        		}
+        	}catch(err){
+        		
+        	}
+            const div = document.createElement('div');
+            div.className = `flex w-full ${role === 'user' ? 'justify-end' : 'justify-start'}`;
+            
+            const bubble = document.createElement('div');
+            bubble.className = `max-w-[85%] rounded-2xl px-5 py-3 text-sm leading-relaxed ${
+                role === 'user' 
+                ? 'bg-gray-700 text-white rounded-br-none' 
+                : 'bg-transparent text-gray-100' // AI looks cleaner without a distinct bubble background sometimes, or use bg-gray-800
+            }`;
+
+            if (role === 'ai') {
+                // Parse Markdown
+                bubble.innerHTML = `<div class="markdown-body">${marked.parse(text)}</div>`;
+            } else {
+                bubble.innerText = text;
+            }
+
+            div.appendChild(bubble);
+            chatContainer.appendChild(div);
+        }
+
+        function appendLoading() {
+            const id = 'loading-' + Date.now();
+            const div = document.createElement('div');
+            div.id = id;
+            div.className = 'flex w-full justify-start';
+            div.innerHTML = `
+                <div class="bg-gray-800 rounded-2xl px-5 py-3 flex items-center space-x-2">
+                    <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+                    <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+                    <div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+                </div>
+            `;
+            chatContainer.appendChild(div);
+            return id;
+        }
+
+        function removeLoading(id) {
+            const el = document.getElementById(id);
+            if (el) el.remove();
+        }
+
+        function scrollToBottom() {
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+        }
+
+        // --- Helper ---
+        async function authenticatedFetch(url, options = {}) {
+            if (!options.headers) options.headers = {};
+            options.headers['Authorization'] = `Bearer ${authToken}`;
+            options.headers['Content-Type'] = 'application/json';
+
+            const res = await fetch(url, options);
+            if (res.status === 401 || res.status === 403) {
+                handleLogout();
+                throw new Error("Unauthorized");
+            }
+            return res;
+        }
+    </script>
+</body>
+</html>

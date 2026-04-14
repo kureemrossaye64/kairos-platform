@@ -5,12 +5,10 @@ import java.io.File;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 
 import com.kairos.core.crawler.CrawlerService;
 import com.kairos.core.crawler.DocumentExtraction;
 import com.kairos.core.crawler.UrlToCrawl;
-import com.kairos.crawler.CrawlController.WebCrawlerFactory;
 import com.kairos.crawler.fetcher.PageFetcher;
 import com.kairos.crawler.robotstxt.RobotstxtConfig;
 import com.kairos.crawler.robotstxt.RobotstxtServer;
@@ -20,16 +18,11 @@ import com.kairos.crawler.util.Util;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Service
 @Slf4j
 @RequiredArgsConstructor
 public class WebCrawlerService implements CrawlerService{
 
-    @Value("${kairos.crawler.user-agent}")
-    private String userAgent;
-
-    @Value("${kairos.crawler.crawl-delay-ms}")
-    private int crawlDelayMs;
+    private final CrawlConfig config;
 
     public List<DocumentExtraction> executeCrawl(UrlToCrawl toCrawl) {
     	String startUrl = toCrawl.url();
@@ -37,12 +30,12 @@ public class WebCrawlerService implements CrawlerService{
         log.info("Executing Crawler4j crawl for URL: {} with max depth: {}", startUrl, maxDepth);
 
         // A temporary folder for the crawl's state data.
-        File crawlStorageFolder = new File("crawl-data");
-        CrawlConfig config = new CrawlConfig();
-        config.setCrawlStorageFolder(crawlStorageFolder.getAbsolutePath());
-        config.setMaxDepthOfCrawling(maxDepth);
-        config.setPolitenessDelay(crawlDelayMs);
-        config.setUserAgentString(userAgent);
+      //  File crawlStorageFolder = new File("crawl-data");
+        //CrawlConfig config = new CrawlConfig();
+       // config.setCrawlStorageFolder(crawlStorageFolder.getAbsolutePath());
+      //  config.setMaxDepthOfCrawling(maxDepth);
+       // config.setPolitenessDelay(crawlDelayMs);
+       // config.setUserAgentString(userAgent);
         try {
         // Instantiate the controller for this crawl.
 	        PageFetcher pageFetcher = new PageFetcher(config);

@@ -19,7 +19,7 @@ public class LLMVideoAnalysisService implements VideoAnalysisService{
 	
 	public LLMVideoAnalysisService(ChatLanguageModel chatModel) {
 		super();
-		this.videoAgent = AiServices.create(VideoAgent.class, chatModel);
+		this.videoAgent = AiServices.create(VideoAgent.class, chatModel.getModel());
 	}
 	
 	interface VideoAgent {

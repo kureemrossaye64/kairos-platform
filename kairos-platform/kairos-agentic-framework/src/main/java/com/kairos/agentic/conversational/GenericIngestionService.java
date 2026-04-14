@@ -11,7 +11,6 @@ import java.util.stream.Collectors;
 import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Service;
 
 import com.kairos.agentic.form.Form;
 import com.kairos.agentic.form.FormField;
@@ -22,7 +21,6 @@ import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
 import lombok.extern.slf4j.Slf4j;
 
-@Service
 @Slf4j
 public class GenericIngestionService {
 

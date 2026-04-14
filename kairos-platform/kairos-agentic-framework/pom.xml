@@ -28,12 +28,6 @@
 			<artifactId>kairos-vector-search</artifactId>
 		</dependency>
 		
-		
-
-		<!--
-        LangChain4j Core and AI Services. This brings in the core agentic
-        abstractions like @Tool, @AiService, and memory management.
-        -->
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j</artifactId>

@@ -10,6 +10,9 @@ import dev.langchain4j.model.chat.ChatModel;
  * interface. This gives us the benefit of abstraction while allowing us to seamlessly
  * plug our implementation into other LangChain4j components like AiServices later.
  */
-public interface ChatLanguageModel extends ChatModel {
+public interface ChatLanguageModel  {
+	
+	
+    public ChatModel getModel();
     
 }

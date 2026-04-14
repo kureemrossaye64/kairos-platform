@@ -1,14 +1,5 @@
 package com.kairos.agentic.transactional;
 
-import com.kairos.agentic.conversational.FieldProcessorStrategy;
-import com.kairos.agentic.tools.ContextAwareStrategy;
-import com.kairos.agentic.transactional.annotations.TransactionalField;
-
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Service;
-
-import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +7,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-@Service
+import org.springframework.context.ApplicationContext;
+
+import com.kairos.agentic.conversational.FieldProcessorStrategy;
+import com.kairos.agentic.tools.ContextAwareStrategy;
+import com.kairos.agentic.transactional.annotations.TransactionalField;
+
+import lombok.extern.slf4j.Slf4j;
+
 @Slf4j
 public class TransactionService {
 

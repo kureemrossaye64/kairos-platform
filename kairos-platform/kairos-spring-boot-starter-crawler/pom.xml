@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.kairos</groupId>
+        <artifactId>kairos-platform</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kairos-spring-boot-starter-crawler</artifactId>
+    <packaging>jar</packaging>
+    
+    <name>KAIROS Spring Boot Starter - Web Crawler</name>
+    <description>
+        Distributed web crawling with support for polite, scalable content extraction.
+        Includes RabbitMQ support for distributed mode (optional).
+        Integrates with Ingestion pipeline for automatic document processing.
+    </description>
+
+    <dependencies>
+        <!-- Core Starter -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-spring-boot-starter-core</artifactId>
+        </dependency>
+
+        <!-- Crawler Module -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-crawler</artifactId>
+        </dependency>
+
+        <!-- Ingestion (for pipeline integration) -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-ingestion</artifactId>
+        </dependency>
+
+        <!-- Apache HttpClient (Used by Crawler4j) -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <!-- JSoup for HTML parsing -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+        </dependency>
+
+        <!-- Apache Tika for content extraction -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-parsers-standard-package</artifactId>
+        </dependency>
+
+        <!-- Optional: RabbitMQ for Distributed Crawling -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- URL Detection -->
+        <dependency>
+            <groupId>com.linkedin.urls</groupId>
+            <artifactId>url-detector</artifactId>
+            <version>0.1.17</version>
+        </dependency>
+
+        <!-- Google Guava (Required by URL detector and crawler utils) -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+    </dependencies>
+</project>

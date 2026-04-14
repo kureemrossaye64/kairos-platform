@@ -4,7 +4,6 @@ import java.util.NoSuchElementException;
 
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,10 +16,13 @@ import com.kairos.core.search.VectorStoreService;
 import com.kairos.ingestion.events.SourceRecordCreatedEvent;
 import com.kairos.ingestion.pipeline.DataSource;
 import com.kairos.ingestion.pipeline.Pipeline;
+import com.kairos.ingestion.processor.AdvancedLayoutAnalysisProcessor;
 import com.kairos.ingestion.processor.AiEnrichmentProcessor;
 import com.kairos.ingestion.processor.AudioTranscriptionProcessor;
-import com.kairos.ingestion.processor.DocumentSplitterProcessor;
+import com.kairos.ingestion.processor.GraphIngestionProcessor;
+import com.kairos.ingestion.processor.HierarchicalProcessor;
 import com.kairos.ingestion.processor.ImageAnalysisProcessor;
+import com.kairos.ingestion.processor.ParentChildSplitterProcessor;
 import com.kairos.ingestion.processor.TextCleaningProcessor;
 import com.kairos.ingestion.processor.TikaDocumentParserProcessor;
 import com.kairos.ingestion.processor.VideoAnalysisProcessor;
@@ -29,7 +31,6 @@ import com.kairos.ingestion.source.SourcePersistenceService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Service
 @Slf4j
 @RequiredArgsConstructor
 public class IngestionRouter implements IIngestionRouter{
@@ -43,6 +44,9 @@ public class IngestionRouter implements IIngestionRouter{
     private final VideoAnalysisProcessor videoProcessor;
     private final ImageAnalysisProcessor imageProcessor;
     private final TikaDocumentParserProcessor tikaDocumentProcessor;
+    private final GraphIngestionProcessor graphProcessor;
+    private final ParentChildSplitterProcessor parentChildSplitterProcessor;
+    private final HierarchicalProcessor hProcessor;
     
     // Text-Based Processors
     private final TextCleaningProcessor textCleaningProcessor;
@@ -89,7 +93,7 @@ public class IngestionRouter implements IIngestionRouter{
                 Pipeline.from(source)
                     .through(audioProcessor)      // SourceRecord -> Transcribed Document
                     .through(textCleaningProcessor)   // Clean the transcript
-                    .through(new DocumentSplitterProcessor(500, 50))
+                    .through(parentChildSplitterProcessor)
                     .through(aiEnrichmentProcessor) // Enrich the transcript chunks
                     .to(sink);
 
@@ -98,7 +102,7 @@ public class IngestionRouter implements IIngestionRouter{
                 Pipeline.from(source)
                     .through(videoProcessor)      // SourceRecord -> Analyzed Document (transcript + narrative)
                     .through(textCleaningProcessor)
-                    .through(new DocumentSplitterProcessor(1000, 100)) // Use larger chunks for video
+                    .through(parentChildSplitterProcessor) // Use larger chunks for video
                     .through(aiEnrichmentProcessor)
                     .to(sink);
 
@@ -110,16 +114,27 @@ public class IngestionRouter implements IIngestionRouter{
                     // SourceRecord -> Described Document
                     // Image descriptions are usually short and dense.
                     // We'll enrich them but not split them.
-                    .through(new DocumentSplitterProcessor(500, 50))
+                    .through(parentChildSplitterProcessor)
                     .through(aiEnrichmentProcessor)
                     .to(sink);
 
-            } else if (isDocumentType(contentType)) {
+            }else if(isPdfType(contentType)) {
+            	 log.info("Routing to PDF pipeline for SourceRecord ID: {}", record.getId());
+                 Pipeline.from(source)
+                    //.through(tikaDocumentProcessor) // SourceRecord -> Parsed Document
+                 	//.through(hProcessor)
+                 	.through(graphProcessor)
+                     //.through(textCleaningProcessor)
+                     //.through(new ParentChildSplitterProcessor())
+                     .through(aiEnrichmentProcessor)
+                     .to(sink);
+            }else if (isDocumentType(contentType)) {
                 log.info("Routing to DOCUMENT pipeline for SourceRecord ID: {}", record.getId());
                 Pipeline.from(source)
-                    .through(tikaDocumentProcessor) // SourceRecord -> Parsed Document
+                   .through(tikaDocumentProcessor) // SourceRecord -> Parsed Document
+                	//.through(hProcessor)
                     .through(textCleaningProcessor)
-                    .through(new DocumentSplitterProcessor(500, 50))
+                    .through(new ParentChildSplitterProcessor())
                     .through(aiEnrichmentProcessor)
                     .to(sink);
 
@@ -141,6 +156,10 @@ public class IngestionRouter implements IIngestionRouter{
         } finally {
         	sourceRecordService.save(record);
         }
+    }
+    
+    private boolean isPdfType(String contentType) {
+    	return contentType.equals("application/pdf");
     }
 
     /**

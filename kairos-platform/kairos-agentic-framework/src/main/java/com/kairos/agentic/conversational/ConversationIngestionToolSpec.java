@@ -19,6 +19,9 @@ public class ConversationIngestionToolSpec extends AbstractSpecProvider {
 	public String getEnrichedDescription() {
 		Reflections reflections = new Reflections("com.kairos");
 		Set<Class<?>> entities = reflections.getTypesAnnotatedWith(ConversationalEntity.class);
+		if(entities.isEmpty()) {
+			return null;
+		}
 		String dynamicEntityList = entities.stream().map(cls -> {
 			ConversationalEntity annotation = cls.getAnnotation(ConversationalEntity.class);
 			return String.format("'%s' (%s)", annotation.name(), annotation.description());

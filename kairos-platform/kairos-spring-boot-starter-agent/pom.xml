@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.kairos</groupId>
+        <artifactId>kairos-platform</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kairos-spring-boot-starter-agent</artifactId>
+    <packaging>jar</packaging>
+    
+    <name>KAIROS Spring Boot Starter - AI Agent</name>
+    <description>
+        Enables AI capabilities: LLM integration (Gemini), tool-using agents, 
+        conversational memory, and RAG (Retrieval-Augmented Generation) support.
+        Requires kairos-spring-boot-starter-core.
+    </description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-spring-boot-starter-core</artifactId>
+        </dependency>
+
+        <!-- Agent Framework -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-agentic-framework</artifactId>
+        </dependency>
+
+        <!-- AI Abstraction Layer -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-ai-abstraction</artifactId>
+        </dependency>
+
+        <!-- LangChain4j Integration -->
+       <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-vertex-ai-gemini-spring-boot-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-embeddings-bge-small-en-v15-q</artifactId>
+        </dependency>
+
+
+        <!-- Reflections for Tool Discovery -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections</artifactId>
+            <version>0.10.2</version>
+        </dependency>
+    </dependencies>
+</project>

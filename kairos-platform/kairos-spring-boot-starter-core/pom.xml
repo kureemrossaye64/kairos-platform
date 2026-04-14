@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.kairos</groupId>
+        <artifactId>kairos-platform</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kairos-spring-boot-starter-core</artifactId>
+    <packaging>jar</packaging>
+    
+    <name>KAIROS Spring Boot Starter - Core</name>
+    <description>
+        Core starter providing KAIROS platform fundamentals: 
+        auto-configuration, JPA persistence, and REST capabilities.
+        This is the minimal starter required for any KAIROS application.
+    </description>
+ 
+    <dependencies>
+        <!-- KAIROS Auto-Configuration (The brain of the framework) -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-autoconfigure</artifactId>
+        </dependency>
+
+        <!-- KAIROS Core Domain -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-core</artifactId>
+        </dependency>
+
+    </dependencies>
+</project>

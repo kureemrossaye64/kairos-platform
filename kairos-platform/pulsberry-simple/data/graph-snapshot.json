@@ -1,0 +1,2790 @@
+{
+  "vertices" : [ {
+    "id" : "ROOT",
+    "label" : "Universe",
+    "type" : "ROOT",
+    "summary" : "The start of all knowledge."
+  }, {
+    "id" : "TOPIC-eb903d2b",
+    "label" : "Dubai Municipality Food Control",
+    "type" : "TOPIC",
+    "summary" : "This document describes a specific initiative by the Dubai Municipality, making it a distinct topic that doesn't fit within any existing categories at the 'Universe' level. Creating a new top-level topic will allow for further organization of related documents in the future."
+  }, {
+    "id" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "label" : "Food-Code-2013-English.pdf",
+    "type" : "DOCUMENT",
+    "summary" : "Document imported via AI Ingestion"
+  }, {
+    "id" : "d992cdbc-60a0-45af-8743-e07f95dcad29",
+    "label" : "FOOD CODE",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "d73f4f7f-b3f3-470e-9679-5df58f8d2c0e",
+    "label" : "Message from the Director General",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "label" : "CONTENTS",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "label" : "1 Preliminary Provisions",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "c3b8d504-56a1-4f92-ae33-7ffe063e5b85",
+    "label" : "1.1 Introduction",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "d448d98e-2ac9-4bb4-8eed-1943811b8e42",
+    "label" : "1.2 Purpose",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "b9c0fce9-20a5-46d1-b6b3-003437e206aa",
+    "label" : "1.3 Application",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "62660a2e-4c1d-4a51-bfd8-3c654ba7bd18",
+    "label" : "1.4 Scope",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5e8a01b7-8277-40be-8ec5-1030b077cb1f",
+    "label" : "1.5 Guiding Principles",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "e2b141b8-9e44-41a3-a859-eb72a64cabe9",
+    "label" : "1.6 Definitions",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "label" : "2 Licensing, Approvals, Construction, Design and Facilities",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "89186fc1-b881-4ca0-965d-355fd04d9ebd",
+    "label" : "2.1 Trade License",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "a1e1cd75-4166-46f1-bf61-05170fe83069",
+    "label" : "2.2 Approval of Construction Plans and Specifications",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "b4a5d5e7-dc03-4574-a805-9357a08ee574",
+    "label" : "2.3 Site and Location",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "6367b7ee-e6dc-49ad-bf88-917d7e5bea48",
+    "label" : "2.4 General Requiements for Design and Construction",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "34e56902-175b-41a7-b195-0494598e5926",
+    "label" : "2.5 Spatial Requirements",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "544019f2-c881-47c7-874f-862735d86027",
+    "label" : "2.6 Floor, Walls and Ceilings",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "b1471d2b-2c47-4daf-beb7-24e5a3c6ffd8",
+    "label" : "2.6.1 Floors",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "ca2d387a-69b1-4e17-b993-d5850ad958dd",
+    "label" : "2.6.1.1 Floors in Dry Areas",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "4f451809-d375-4208-b694-3c2f1d54df93",
+    "label" : "2.6.1.2 Floors in Wet Areas",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "d457e789-3965-4baf-909e-47566e16aa88",
+    "label" : "2.6.1.3 Temporary Flooring",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "9870221b-18a3-4a82-90ee-18883dbe6b18",
+    "label" : "2.6.2 Walls and Ceiling",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "417ae255-2eb6-475d-84a7-db4db87e98e9",
+    "label" : "2.6.2.1 Walls",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "41df844b-76bc-4e77-8626-c3ee13ddfc77",
+    "label" : "2.6.2.2 Ceiling",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "285aec0e-009b-48db-a07a-981eff6a81bd",
+    "label" : "2.6.2.3 False Ceiling",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "f1c07411-f165-4795-a816-cb55de62c073",
+    "label" : "2.7 Floor Drains",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "e451496f-f424-4fdc-ae0c-d3c2906c71ad",
+    "label" : "2.8 Stairs and Mezzanines",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "4fcbfe77-0086-454f-8f44-ebccff9e8de3",
+    "label" : "2.9 Equipment and Utensils",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "2c49ff58-7216-4c4e-9c4e-176a34b83721",
+    "label" : "2.9.1 Equipment Design and Layout",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "e244f31c-a8d5-47d9-88f6-525eb7dd230d",
+    "label" : "2.9.2 Location of Equipment",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "f73f0200-6aef-438f-87c5-5a721b398425",
+    "label" : "2.9.3 Fixed Equipment",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "4ede5fe3-ef00-4513-bd95-ee2de048b71a",
+    "label" : "2.9.4 Calibration and Standardisation",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "682cd81a-9db3-404d-ab5c-a4a985e046c8",
+    "label" : "2.10 Lighting",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5d1d0932-aa4a-468f-a1dd-5b2bb3e69b91",
+    "label" : "2.11 Ventilation",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "9e05a7bb-fe23-44e9-a035-8ba8d2fb9248",
+    "label" : "2.12 Storage Areas",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f01ce30c-b045-4bc2-9cad-1296997f6736",
+    "label" : "2.13 Water Supply",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "4e048ba9-f6ad-489b-83b4-10abe4410caf",
+    "label" : "2.14 Sewage and Solid Waste Disposal",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c9f106a4-e9ef-4c9c-b4cc-d3b49d51c82a",
+    "label" : "2.15 Grease Traps",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "4920fed9-401a-42a5-b383-a7175a826187",
+    "label" : "2.16 Plumbing System",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "0b39c210-9429-432c-9214-a780adc7795b",
+    "label" : "2.17 Overhead Utility Lines",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5ccdd3a0-3aab-4dbf-872d-70b18ad5e9ca",
+    "label" : "2.18 Handwash Stations",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "70c9f0b2-fbde-45ab-a604-c1545b58f560",
+    "label" : "2.19 Toilet Facilities and Dressing Areas",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "cc5545ab-869a-40fc-8397-bef9966c88b9",
+    "label" : "2.20 Cleaning Facilities",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "51625530-3d79-456b-a650-41c850a5ef70",
+    "label" : "2.21 Exterior Openings",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "2e50a127-0946-4758-ba7d-7f7cc957e959",
+    "label" : "2.22 Temporary Food Establishments",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "b8a06df2-a330-4f58-824e-5255559ea1e3",
+    "label" : "2.23 Mobile Vendors, Stalls, Catering Trucks, Dinner Cruise, Desert Events",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "162bc14e-93fe-4565-ad84-9a502dcf9e1c",
+    "label" : "2.24 Vending Machines",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "8181bb05-40fc-4dea-ae73-387c90dd4c41",
+    "label" : "2.24.1 Liquid Foods and Ice",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "9c8b1300-c280-4f35-bd56-8fe93d7ba320",
+    "label" : "2.24.2 Self-Service Beverages",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "9f24f56c-3fc7-4459-8dd8-d804305ce344",
+    "label" : "2.24.3 Beverages in Paper-Based Packaging",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "8f7b9b52-8164-4080-b2f9-acba78040ba7",
+    "label" : "2.24.4 Vending of High Risk Foods",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5d0b88e7-f227-42c4-858d-1b61b9f4dcd6",
+    "label" : "3 Control of Hazards in Food",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "26622909-51ad-4d4b-9bb5-fc4a597ed0ef",
+    "label" : "3.1 Management of Food Safety",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "95a2d789-d3a6-42c1-abd4-1f1475c8a13d",
+    "label" : "3.1.1 Management - Person in Charge",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "09e9763e-d794-4529-ad23-b437a2db7a22",
+    "label" : "3.1.2 Roles and Responsibilities of Person in Charge",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "f69bbf75-ccaa-4614-bae2-0a3e39ae140c",
+    "label" : "3.1.3 Food Safety Programmes",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "b9b003de-01f5-4bac-bcfe-8317217946c0",
+    "label" : "3.1.3.1 General Requirements for Food Safety Programme",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "c8ed160d-e099-404e-b195-9b5c757249b6",
+    "label" : "3.1.3.2 Auditing of Food Safety Programme",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "d6ba2d96-1d57-45a7-a0f8-e2c638a8055c",
+    "label" : "3.1.3.3 Content of Food Safety Programme",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "28dffe57-c60b-43d9-9dc9-7b0d77fc1671",
+    "label" : "3.2 Food Handling and Processing",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "480dd12b-e7b2-4c27-8add-f9d34c6d2f49",
+    "label" : "3.2.1 General Requirements for Processing Food",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "daf14866-cea6-4dd9-95c6-57b4198e3cda",
+    "label" : "3.2.2 Food Source",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "de71eaa5-3011-4fbe-ba2e-73c5d8ef6561",
+    "label" : "3.2.2.1 Approved Sources",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "c7f3fb77-afcd-40c2-85e4-8a2400a0ebe5",
+    "label" : "3.2.2.2 Unapproved Sources",
+    "type" : "SECTION",
+    "summary" : "Level 5"
+  }, {
+    "id" : "e6f968a8-96f8-4a31-88c9-2b418abc16b2",
+    "label" : "3.2.3 Food Receiving",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "78df2e1a-e8a5-40d6-bc3e-c93ec5b69407",
+    "label" : "3.2.3.1 Inspection of Incoming Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "302ff724-9ee2-4fa8-b96a-7b3f90c58f93",
+    "label" : "3.2.3.2 Product Identification",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "006dd16e-6511-44eb-aa6c-a390bf92d07d",
+    "label" : "3.2.3.3 Ingredient Inspection and Control",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "a85c3479-a05b-4f3c-a42d-ebfc4a261cd5",
+    "label" : "3.2.4 Food Additives",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "14f1928f-11e2-4d51-bf6d-e3de0d871d8b",
+    "label" : "3.2.5 Handling Raw Food",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "2169572b-ec0e-48e9-a1ba-444074bfee67",
+    "label" : "3.2.6 Handling of Chilled and Frozen Foods",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "27b018eb-856c-4710-84eb-d58db6b320b7",
+    "label" : "3.2.7 Thawing",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "5f10d11f-3ed0-4b03-98e4-97ed770dab1b",
+    "label" : "3.2.8 Cooking Raw Foods of Animal Origin",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "d6e8ef65-ef1e-4e0b-9cff-0f0791f72514",
+    "label" : "3.2.9 Raw Ready to Eat Foods of Animal Origin",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3c40717a-ad20-40ad-b2b0-c97051bc932f",
+    "label" : "3.2.10 Hot Holding",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "1f4682c1-be43-400e-96d7-08144d1f75e5",
+    "label" : "3.2.11 Cooling after Cooking",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "6f021a90-9c60-469f-9ec0-9db09ea0675c",
+    "label" : "3.2.12 Cooling from Room Temperature",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "05cc8c4f-3880-431c-b982-b17174d3333d",
+    "label" : "3.2.13 Reheating Cooked Foods for Hot Holding",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "d97aaaaf-b7b4-4523-9ce3-f25c736927c0",
+    "label" : "3.2.14 Reheating Cooked Food for Immediate Service",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "41491f50-43ff-4b47-9474-19c227a83b7e",
+    "label" : "3.2.15 Use of Microwave for Cooking or Reheating",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "1ce8ea2e-ffc0-4f80-a037-ffef1ffa1570",
+    "label" : "3.2.16 Canning",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "d28d22ff-c6d2-4b3b-8057-643954c0191f",
+    "label" : "3.2.17 Use of Non-thermal Processes for Pathogen Reduction",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "f7585f70-bd84-48ac-8b88-7c50b7dd9aa8",
+    "label" : "3.2.18 Controlling Growth of Pathogens with Water Activity and Acid Ingredients",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "05be7652-1f51-4c73-8108-596a5d629f4a",
+    "label" : "3.3 Time as a Safety Control",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "9f594cd2-f509-4f28-87e2-aa7821e4fc10",
+    "label" : "3.4 Preventing Food and Ingredient Contamination",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "80bb8953-c8da-4d70-a531-28444cc32399",
+    "label" : "3.4.1 Preventing Microbial Contamination",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "84d9e6b2-56c7-42a5-b41a-5f7d016acd3f",
+    "label" : "3.4.2 Physical and Chemical Contamination",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "6cfaf249-67cd-4043-923e-2478a8d43e4f",
+    "label" : "3.4.3 Management of Allergens",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "label" : "3.5 Packaging",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "77896568-8a3a-4aca-8d5d-446d1b84633f",
+    "label" : "3.5.1 General Requirements for Packaging Materials",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f8a391cb-a838-4328-b4e3-c14302bc75db",
+    "label" : "3.5.2 Protection of Food Content",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "9725548e-287b-4ffb-9fdd-f83ef9c72725",
+    "label" : "3.5.3 Reduced Oxygen Packing",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "d0ba3f0f-9563-4655-9c24-3891e1748971",
+    "label" : "3.5.4 Food Containers",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "6d9b3741-6b2b-483b-91de-72a29da33f0b",
+    "label" : "3.5.5 Reusable Packaging",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "eddda1ce-faa3-42fb-8a34-d1a6f7831178",
+    "label" : "3.5.6 Storage of Packaging Supplies",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "13e1a9b4-9ede-47d3-9d73-f5620837ee39",
+    "label" : "3.5.7 Returnables, Cleaning-for-Refilling",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "4421ac57-7fe6-4c01-81b4-55eb912bb8b2",
+    "label" : "3.6 Storage, Transportation and Distribution of Food Products",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "1ba46240-8912-4653-bb85-1afd591368e1",
+    "label" : "3.6.1 Food Transportation, Storage and Distribution Units",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "e86792cd-838a-4734-ae84-898846c6ffc5",
+    "label" : "3.6.2 Temperature Control During Transportation and Storage",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "349875cd-ba56-4bc5-99af-564d51209472",
+    "label" : "3.6.3 Handling and Transfer of Foods",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "ee270db3-9277-470b-8a59-df88769c06d0",
+    "label" : "3.6.4 Storage Procedures",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "a8b38170-27b3-4d1b-86f1-f256bc0ee126",
+    "label" : "3.6.5 Disposal of Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "label" : "4 Cleaning and Maintenance",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e91ad7c5-7f0e-4911-b891-5e94c0e86cf4",
+    "label" : "4.1 General Requirements Pertaining to Maintenance",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "77afc406-d239-4e63-9eef-93d97011fc5e",
+    "label" : "4.2 Cleaning and Disinfection",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "35194635-9b9e-419a-aa6a-a6da13987f5a",
+    "label" : "4.2.1 General Requirements Pertaining to Cleaning",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "524c1214-567e-43f5-bdc2-a712f121cdf1",
+    "label" : "4.2.2 Cleaning Facilities",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "ae6667de-d321-4b36-ae67-d6ff3b2db771",
+    "label" : "4.2.3 Cleaning and Disinfection Process",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "b2e2cdf4-d9f2-46f1-833c-22050ecbc0f2",
+    "label" : "4.2.4 Cleaning Chemicals",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5ea06cc5-aea1-48ca-a3d5-37970d238ff6",
+    "label" : "4.2.5 Cleaning Tools and Equipment",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "9de20468-b0fd-4205-88ce-46b5b72132e0",
+    "label" : "4.2.6 Cleaning and Disinfection Programme",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "15501576-f5c4-443b-b04f-9f216922a8be",
+    "label" : "4.3 Pest Control",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "b0f28347-3111-4da3-a2e6-04f4345b4551",
+    "label" : "4.4 Prevention and Control of Pest Infestation",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "91181c66-91a6-4127-992e-c37bf02049f0",
+    "label" : "4.5 Use of Chemicals and Toxic Substances",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "a2b1c38c-df9f-46f1-8548-32e905d017ae",
+    "label" : "5 Personal Hygiene",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e3ed11f2-c349-4cc9-b92b-287984c30350",
+    "label" : "5.1 Personal Health and Illnesses",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "1eae0f77-f1fe-42db-81ab-05329b6d0e17",
+    "label" : "5.2 Injuries",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f20b870a-1560-4250-bb76-110e3ebd341b",
+    "label" : "5.3 Personal Hygiene Practices",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c270d481-0095-4087-bd0d-6df6b69fbbbd",
+    "label" : "5.4 Personal Habits",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "e4fd921d-2621-48a1-8217-5b1203efc307",
+    "label" : "5.5 Visitors",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "7920faae-4205-42cc-b913-8a2c2bd3b0d0",
+    "label" : "6 Training of Food Handlers",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "a7c24412-965e-40af-88c4-c508b0ec1967",
+    "label" : "6.1 Role of the Person in Charge",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "18533b52-9cf5-41b0-9eb7-6a8173e328ed",
+    "label" : "6.2 Training Programme",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c9c01657-ef4d-4196-b163-330da71d5c98",
+    "label" : "6.3 Continuing Educational Training",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "e14994f8-bfc6-475e-8230-82b0237b8025",
+    "label" : "7 Provisions Applicable to Sale, Import and Export of Food",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "94582033-19f0-493c-a10b-987b738603cc",
+    "label" : "7.1 Registration and Approvals",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "26b663db-4d9a-47db-a09e-166fce3aac0d",
+    "label" : "7.2 Sourcing Food",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3f43e585-a3d0-4421-b439-5fee26f002d5",
+    "label" : "7.3 Food Inspection and Document Verification",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "label" : "8 Miscellaneous",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "b89a57e9-6742-443c-a00f-e3edea1ea0c3",
+    "label" : "8.1 Food Labelling",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "9669034b-641d-444f-9735-5626ec090a3b",
+    "label" : "8.2 Product Shelf Life",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "95107dc8-7e99-4251-a8a5-45b71e088cb2",
+    "label" : "8.3 Product Menu in Food Service Establishments",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "6bb9c0f3-a389-4b16-af56-aed9082d5e5c",
+    "label" : "8.4 Filtration and Disinfection Facilities for Fish Tank Water",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "1ec626be-7488-4cb4-b3fb-30e4b1b2172a",
+    "label" : "8.5 Single Use items",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "4d0e0610-a904-4b02-a869-dc0574190033",
+    "label" : "8.6 Prohibition of Animals",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "45d47c71-a5ed-401d-91a3-83e1ce8ed8dd",
+    "label" : "8.7 Procedures for Handling Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e910823c-7b9d-44d0-a51e-2629ba3d7a3c",
+    "label" : "8.7.1 Requirements for Imports, Purchase and Sale of Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c72ec606-8767-42f3-9f62-66494b184e91",
+    "label" : "8.7.2 Requirements for Storage of Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "a0979163-7c55-41c8-962d-27e8886e1147",
+    "label" : "8.7.3 Requirements for Preparation of Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5fb5a19e-17fa-4de8-b976-3455230faa91",
+    "label" : "8.7.4 Serving Non Halal Foods in Restaurants",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "965e5d80-33a2-4d1e-b7c8-cb94367fbfac",
+    "label" : "8.7.5 Sale of Pork Products",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "4c510fff-ec12-40f4-98a9-e440354eddc0",
+    "label" : "8.8 Product Traceability and Recall",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "a76d4ce1-4bcb-4dbe-9b0a-202217c14774",
+    "label" : "8.9 Customer Complaint Handling",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "a7a87013-8958-4ca6-82bc-996a341a3e5b",
+    "label" : "8.10 Power Outage",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "70acaded-2344-4c42-b472-e786a81d7aad",
+    "label" : "8.11 Use of Wood in Food Premises",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e6e1b5ff-d275-48a7-a812-fe9994aa11ac",
+    "label" : "8.12 Use of Linen and Other Accessories",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "a6edb299-175c-4c29-8125-c214b5838dfe",
+    "label" : "Annex",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "label" : "1 Preliminary Provisions",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "57025316-a838-4df3-96f8-2e0e0ad566ad",
+    "label" : "1.1 Introduction",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "19c4bc7e-9926-4a65-9da2-7f142d831e11",
+    "label" : "1.2 Purpose",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "78f84a0d-f8a6-48bd-96bd-28467aba89cc",
+    "label" : "1.3 Application",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "c1398cef-44d1-45f8-84e2-8c4767a61479",
+    "label" : "1.4 Scope",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c0e883e5-1ac4-48f3-9957-9c9b6b5b57dd",
+    "label" : "1.5 Guiding Principles",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "4402ce17-fd03-44f2-8964-633bb8d84967",
+    "label" : "1.6 Definitions",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "f081deea-df86-4fb9-9343-e9f56a7159f0",
+    "label" : "2 Licensing, Approvals, Construction, Design and Facilities",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "95bbda4b-a01f-4d5c-b141-a56f05f9c4d7",
+    "label" : "2.1 Trade License",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "f78a9001-bd61-4b68-b13d-008f28dfb569",
+    "label" : "2.2 Approval of Construction Plans and Specifications",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "ca8f12c7-9eca-44e6-887a-64e41db40008",
+    "label" : "2.3 Site and Location",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "a9bbf44b-567c-4dbf-afe6-70d29f52227a",
+    "label" : "2.4 General Requirements for Design and Construction",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "ed1e5741-e209-4643-afb3-995186d39df1",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "59ef7e55-f11c-43c7-82d5-8a631b90c8b1",
+    "label" : "Spatial Requirements",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "689f2479-e5c0-4a9a-9ff2-4cf21fae5a05",
+    "label" : "Floor, Walls and Ceilings",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "910b89e3-46f2-44f8-a10a-6822f3d70fbf",
+    "label" : "Floors",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "a4d36e4f-e20d-4223-8932-c0cead2fc9a9",
+    "label" : "Floors in Dry Areas",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "a5ad249e-847d-4cef-b7c6-82e1a5d4aa42",
+    "label" : "2.6.1.2 Floors in Wet Areas",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "c5736323-796a-4ce8-8d8b-a030b5ca25e5",
+    "label" : "2.6.1.3 Temporary Flooring",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3e503b5c-41f7-4963-bbb1-e1e25dcff299",
+    "label" : "2.6.2 Walls and Ceiling",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "fa04161b-38aa-4173-97fb-6f44df1436e6",
+    "label" : "2.6.2.1 Walls",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c064844b-ecce-485a-bf2b-98c8bc8ca207",
+    "label" : "2.6.2.2 Ceiling",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "2955f392-6e60-4203-b112-f99d2c9b7c07",
+    "label" : "2.6.2.3 False Ceiling",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "297bb3f6-b3cd-42db-9988-1f83642bfe78",
+    "label" : "2.7 Floor Drains",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "ec278d82-1f0a-4c9a-a3e3-aef5c4677f02",
+    "label" : "2.8 Stairs and Mezzanines",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3b1f2011-f725-4add-92f9-6e9e7a733450",
+    "label" : "2.9 Equipment and Utensils",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "32b134ca-5868-4889-9b7d-4194857337b1",
+    "label" : "2.9.1 Equipment Design and Layout",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "04f527c8-f507-4962-9903-0189570cbc6d",
+    "label" : "2.9.2 Location of Equipment",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "b0d1b872-5ff6-4459-8bff-fcd13c5fced9",
+    "label" : "2.9.3 Fixed Equipment",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "b9cfef61-cb33-400c-b2e9-803899af9297",
+    "label" : "2.9.4 Calibration and Standardisation",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "fae001ec-b55d-4bfd-a014-cd2ec1d22e7c",
+    "label" : "2.10 Lighting",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "25d6a61d-cd3d-441d-9a4b-4472da87762e",
+    "label" : "2.11 Ventilation",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "c4e2660d-2b3d-4f1a-9c89-95c04632ce4f",
+    "label" : "2.12 Storage Areas",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "417cacd3-bbdf-486c-8e11-d68089200c41",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5a2d8904-e69f-45a0-9374-b048f86d19a8",
+    "label" : "2.13 Water Supply",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "ff6be961-bf80-4743-9134-b011a59cc869",
+    "label" : "2.14 Sewage and Solid Waste Disposal",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "f021c2fc-2aa5-407f-8738-3cb9d919670d",
+    "label" : "2.15 Grease Traps",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "0814175c-e4eb-491e-b19d-3980244cc601",
+    "label" : "2.16 Plumbing System",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "5e1fad63-43bf-418d-8e32-1a5b92b78fd1",
+    "label" : "2.17 Overhead Utility Lines",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3109cc7a-a233-480a-a66c-f779ddbbda03",
+    "label" : "2.18 Handwash Stations",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "135e3c97-f62f-4da0-8dc5-b33cd577b771",
+    "label" : "Toilet Facilities and Dressing Areas",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "5b627f7d-7a1b-4e68-a0f8-c87a26057e4d",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "862e1d98-8676-4b45-a15a-d69c968445f5",
+    "label" : "2.20 Cleaning Facilities",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "b016a359-3055-415e-8caf-c43e2ae00dd7",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "d28c6575-5074-4c59-af6d-10e123295a2f",
+    "label" : "2.21 Exterior Openings",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3debfcdb-d836-4c13-b33d-369f5e8314cc",
+    "label" : "2.22 Temporary Food Establishments",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "9602f74d-222d-4ba7-aff3-adda5f9a4cf8",
+    "label" : "2.23 Mobile Vendors, Stalls, Catering Trucks , Dinner Cruise, Desert Events",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "ff4e46d3-5599-40b7-b4fe-d0257ecd59a5",
+    "label" : "2.24 Vending Machines",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e445ae5b-0af7-4ff7-88f1-29cfff03e1dd",
+    "label" : "2.24.1 Liquid Foods and Ice",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c8aebe97-1c64-48bc-9802-279c8cc1a0e5",
+    "label" : "2.24.2 Self-Service Beverages",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "81863ec2-3d03-42bb-a4e2-4528b079552e",
+    "label" : "2.24.3 Beverages in Paper-Based Packaging",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "7c35af60-3b1e-414f-a1b6-12f1db55622f",
+    "label" : "2.24.4 Vending of High Risk Foods",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "label" : "3 Control of Hazards in Food",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "73fc17c7-ad3b-431f-9198-9322f85ff5e7",
+    "label" : "3.1 Management of Food Safety",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e4639bf6-422d-41c0-bf99-4ea40a5c829a",
+    "label" : "3.1.1 Management – Person in Charge",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f350132d-c470-4332-b60c-e6e858e646bc",
+    "label" : "3.1.2 Roles and Responsibilities of Person in Charge",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "78818742-69c9-4e89-ad1f-960f281cec78",
+    "label" : "3.1.3 Food Safety Programmes",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "4fe88338-f26b-412f-ae4e-cbd682a8a778",
+    "label" : "3.1.3.1 General Requirements for Food Safety Programmes",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "218fcb30-ff64-4c58-8a18-a6debca7ed41",
+    "label" : "3.1.3.2 Auditing of Food Safety Programme",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "2d8d2471-0876-4828-8b19-97a25c018697",
+    "label" : "3.1.3.3 Content of Food Safety Programmes",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "label" : "Food Handling and Processing",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "f331a13c-fa77-46a2-9aa8-57eb409b7fe5",
+    "label" : "General requirements for processing food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "9cfb68a6-b69c-491a-ad72-3d008f47a488",
+    "label" : "Food Source",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "cf8b2ce6-6e0f-4da3-8c88-3f938ca1ac14",
+    "label" : "Approved Sources",
+    "type" : "SECTION",
+    "summary" : "Level 4"
+  }, {
+    "id" : "8dc7b49a-f972-49c8-af2c-f234426ff010",
+    "label" : "3.2.2.2 Unapproved Sources",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "d1253101-084b-495b-8299-b0a4c7cd24f9",
+    "label" : "3.2.3 Food Receiving",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "2c8d38b8-dafc-4df2-81cb-b183db9a0678",
+    "label" : "3.2.3.1 Inspection of Incoming Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "467ea1dc-6d01-4dbe-ae85-c97632a07fde",
+    "label" : "3.2.3.2 Product Identification",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "fec808aa-f095-4224-ac74-3d54f3d4dd5f",
+    "label" : "3.2.3.3 Ingredient inspection and control",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "e841ebf0-40d7-45c3-9549-873a6e6106d3",
+    "label" : "3.2.4 Food Additives",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "30491c36-4b5d-4587-8deb-e8b62ac4c4b0",
+    "label" : "3.2.5 Handling Raw Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "cfdce1fb-29e1-4907-a3c1-40abc172c5c4",
+    "label" : "3.2.6 Handling of Chilled and Frozen Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "7029b7f7-af79-4e88-ae37-c974aa6055b1",
+    "label" : "3.2.7 Thawing",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c3b9a41b-808b-418f-823a-04efe7e63aea",
+    "label" : "3.2.8 Cooking Raw Foods of Animal Origin",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "6cecceb7-7b3b-4bee-9fb1-de0d259ebba1",
+    "label" : "3.2.9 Raw Ready to Eat Foods of Animal Origin",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "5444d49d-b251-4718-9cd9-e959b4f6d559",
+    "label" : "3.2.10 Hot Holding",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "f034216d-766e-42ca-8e9e-a231cda6db03",
+    "label" : "3.2.11 Cooling after Cooking",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "3b44dc4f-5383-4f09-884f-1be0c458f711",
+    "label" : "3.2.12 Cooling from Room Temperature",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3675941c-ff59-461b-904f-70a93014334a",
+    "label" : "3.2.13 Reheating Cooked Foods for Hot Holding",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "b1d22bf7-36eb-48bb-a0b6-a820b2e351b3",
+    "label" : "3.2.14 Reheating Cooked Food for Immediate Service",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3202e428-3d9d-4cf3-93e0-5e6c886901ef",
+    "label" : "3.2.15 Use of Microwave for Cooking or Reheating",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "b4e1ea2b-a03d-4f11-82bc-315e72302bf9",
+    "label" : "3.2.16 Canning",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "005b92ef-9da0-4af8-aac2-43dd8aad0e9b",
+    "label" : "3.2.17 Use of Non-thermal Processes for Pathogen Reduction",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "b9f32424-6bd6-4df9-a0a2-9794adaf6e40",
+    "label" : "3.2.18 Controlling Growth of Pathogens with Water Activity and Acid Ingredients",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "89cfee3e-1476-4c04-97d4-4bda862c715e",
+    "label" : "3.3 Time as a Safety Control",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "cd3b1dd7-467f-443d-95c7-be94885d8890",
+    "label" : "3.4 Preventing Food and Ingredient Contamination",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "0af60bc1-c523-47de-a25e-80aebc2abed4",
+    "label" : "3.4.1 Preventing Microbial Contamination",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "807f99e7-89e5-4976-9cb2-42d7da494a79",
+    "label" : "3.4.2 Physical and Chemical Contamination",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "290a02fe-7047-4e6b-9440-5ceddd809371",
+    "label" : "3.4.3 Management of Allergens",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "label" : "3.5 Packaging",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "be43f8be-160b-449a-9c36-b78cbcde816c",
+    "label" : "3.5.1 General Requirements for Packaging Materials",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "2aa713d4-0a15-4e34-82ed-665cbee6c850",
+    "label" : "3.5.2 Protection of Food Content",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "3f845a08-82fa-488f-8828-ad6e97342987",
+    "label" : "3.5.3 Reduced Oxygen Packing",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "4fe3d692-44c7-47e7-8058-de061220c0e9",
+    "label" : "3.5.4 Food Containers",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f051b6e4-8777-4af1-8dc6-040d622c4842",
+    "label" : "3.5.5 Reusable Packaging",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "91afb15e-3202-492c-83ea-2327258c57d3",
+    "label" : "3.5.6 Storage of Packaging Supplies",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "cd7675b9-2898-478f-932c-7a29ebe9c7aa",
+    "label" : "3.5.7 Returnables, Cleaning-for-Refilling",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f5f08796-2f52-4f1d-8257-55e2f3f12a0b",
+    "label" : "3.6 Storage, Transportation and Distribution of Food Products",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "aac3a514-efd7-4205-b05c-76f634859a26",
+    "label" : "3.6.1 Food Transportation, Storage and Distribution Units",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "a0b105c8-555a-4093-8e06-f9ff453802f8",
+    "label" : "3.6.2 Temperature Control during Storage and Transportation",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "ac8d79d4-6809-4988-b109-161c8057925c",
+    "label" : "3.6.3 Handling and Transfer of Foods",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "38457acc-005c-405c-a18b-5cfd4730f8b1",
+    "label" : "3.6.4 Storage Procedures",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5f9c61ec-d1cf-41da-bc19-b52d5c7c76c2",
+    "label" : "3.6.5 Disposal of Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "16a8886f-2b8b-4bbb-9203-09641307add6",
+    "label" : "4 Cleaning and Maintenance",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "96d3f95b-0c5a-4a7c-a21b-65f32259f866",
+    "label" : "4.1 General Requirements Pertaining to Maintenance",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "0ace798d-8d5e-4021-94f4-2613f2465f8b",
+    "label" : "4.2 Cleaning and Disinfection",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "7adec2cd-2ed3-4030-80af-11914b1ee167",
+    "label" : "4.2.1 General Requirements Pertaining to Cleaning",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "40bf80a5-2e8f-4032-b01e-d459beb995b1",
+    "label" : "4.2.2 Cleaning Facilities",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "9aa76c8b-fcbf-4bb8-b922-f64fc998e9ab",
+    "label" : "Cleaning and Disinfection Process",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "3e16e606-ecd8-4977-a024-6f4feb553be2",
+    "label" : "4.2.4 Cleaning Chemicals",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "19e1aea5-9437-4964-b160-76f991f7d316",
+    "label" : "4.2.5 Cleaning Tools and Equipment",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "1f6d7bc4-5b42-4201-88e1-ee19bce4717f",
+    "label" : "4.2.6 Cleaning and Disinfection Programme",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "72569df3-5dad-42dc-99fa-847aabfd2083",
+    "label" : "Pest Control",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "eceaf1fd-bd6d-43f5-99fb-6480d9a1765b",
+    "label" : "Prevention and Control of Pest Infestation",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "11736e26-69a6-41d7-84a7-dd5941bb6381",
+    "label" : "a. Prevention of Entry of Pests",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "c43535b6-4127-4180-8517-1723a747eeff",
+    "label" : "b. Elimination of harbourage for pests",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "6ee10214-03c5-413a-a5d9-700633515b39",
+    "label" : "c. Elimination of food sources to pests",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "210f218f-ccc4-4f05-8ae8-6ad44a4c4f16",
+    "label" : "d. Eradication of pests",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "97349faa-2108-482f-ac53-ad977f2714d4",
+    "label" : "4.5 Use of Chemicals and Toxic Substances",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "ce41a482-16b2-45cc-af7f-743d8cb8bbb9",
+    "label" : "5 Personal Hygiene",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "107730db-3064-4a1d-a3b4-7c3a83193929",
+    "label" : "5.1 Personal Health and Illnesses",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "c050bf31-6a72-4d70-a266-2b9ea184528b",
+    "label" : "5.2 Injuries",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "70b5d17c-559a-45a9-b9a5-05ef5ffc2dd9",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "ac880936-97a7-45f2-918e-19ed8fc18136",
+    "label" : "5.3 Personal Hygiene Practices",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c1783f9b-b13d-4462-a0b5-b71378de29b9",
+    "label" : "5.4 Personal Habits",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "f9f5e670-6703-4427-b4f1-a1cbf42aa804",
+    "label" : "5.5 Visitors",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e6e477aa-50f3-425c-b823-ef125267a57a",
+    "label" : "6 Training of Food Handlers",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "479b4738-2d60-420d-9e23-f692158001b4",
+    "label" : "6.1 Role of the Person in Charge",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "e97c8871-c5ed-436a-93cc-2439565b0b09",
+    "label" : "6.2 Training programme",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "7d031104-e362-4692-92bc-eae53acb5045",
+    "label" : "6.3 Continuing Educational Training",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "d062348a-0f72-4e22-830f-aa67bbdf8c36",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "16f5e9af-2883-4643-a948-2a84d86a0cfe",
+    "label" : "7 Provisions Applicable to Sale, Import and Export of Food",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "4b067df3-2e70-4b99-9381-5eec2641de0a",
+    "label" : "7.1 Registration and Approvals",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "89500fc9-d45e-425b-b3dd-a9f25cf528ac",
+    "label" : "7.2 Sourcing Food",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "50ffc2f1-1cba-4c5d-b9ce-51c5a2818677",
+    "label" : "7.3 Food Inspection and Document Verification",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "label" : "8 Miscellaneous",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "59b807a9-cebb-41ce-ab32-f41b7c6ce7b4",
+    "label" : "8.1 Food Labelling",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "066d2422-e151-42cc-8d79-e8fb50f5bab6",
+    "label" : "8.2 Product Shelf Life",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "ded540a4-2077-40b1-9c53-36cdb710c423",
+    "label" : "Rationale:",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "4b39e5c6-99f6-4383-9f41-d2f0f06c3f99",
+    "label" : "8.3 Product Menu in Food Service Establishments",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "0230947b-6c83-45dd-9896-e1ca47c1d813",
+    "label" : "8.4 Filtration and Disinfection Facilities for Fish Tank Water",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "da310f1d-7e8b-477d-821a-668953d941bb",
+    "label" : "8.5 Single-Use Items",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "aea55028-80be-4179-afbd-48a5057a85d5",
+    "label" : "8.6 Prohibition of Animals",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "975cc4fe-8eb3-484e-b5b1-bfffc9d461d3",
+    "label" : "8.7 Procedures for Handling Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "1ddeabba-3130-461d-a6b6-7613b2336610",
+    "label" : "8.7.1 Requirements for Imports, Purchase and Sale of Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "c834bd52-1c97-4fe3-a4e2-48baed9b67b1",
+    "label" : "8.7.2 Requirements for Storage of Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "080fafff-35ec-498d-a4b8-723d20445490",
+    "label" : "8.7.3 Requirements for Preparation of Non-Halal Food",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "3244d794-39a2-4bca-86c6-584876664d3d",
+    "label" : "8.7.4 Serving Non Halal Foods in Restaurants",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "6e77c2c8-3b7d-4e4e-bff9-3baf9b01dd55",
+    "label" : "8.7.5 Sale of Pork Products",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "559f2106-b3a4-4d1a-b063-dae48c2dbda5",
+    "label" : "8.8 Product Traceability and Recall",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "7b6d19ae-fba6-44da-baff-86f620a4cdd2",
+    "label" : "8.9 Customer Complaint Handling",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "3cb92628-449d-4da5-83d5-ae172d8e6963",
+    "label" : "8.10 Power Outage",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "274842d7-416d-417e-8992-b6486963ce0d",
+    "label" : "8.11 Use of Wood in Food Premises",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "c101bae0-f233-48fb-b3d4-d820b1581a0b",
+    "label" : "Use of Linens and Other Accessories",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "a07e51ec-226e-45f2-8e77-8afe5e983acb",
+    "label" : "Menu cards",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "5e3fe557-c71f-4356-aa47-49a18943049b",
+    "label" : "Storage of Soiled Linens",
+    "type" : "SECTION",
+    "summary" : "Level 3"
+  }, {
+    "id" : "f06443d0-3ce1-41f4-9ce4-17026c7b7d60",
+    "label" : "Annex",
+    "type" : "SECTION",
+    "summary" : "Level 1"
+  }, {
+    "id" : "6a0561fd-9a12-4c97-afb1-2a05c6be6f84",
+    "label" : "A. Documents and Records for Food Establishments",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  }, {
+    "id" : "78c5bcf1-b218-4dae-9462-b6991d85f844",
+    "label" : "B. External Links",
+    "type" : "SECTION",
+    "summary" : "Level 2"
+  } ],
+  "edges" : [ {
+    "sourceId" : "ROOT",
+    "targetId" : "TOPIC-eb903d2b",
+    "label" : "HAS_TOPIC"
+  }, {
+    "sourceId" : "TOPIC-eb903d2b",
+    "targetId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "label" : "BELONGS_TO"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "d992cdbc-60a0-45af-8743-e07f95dcad29",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "d73f4f7f-b3f3-470e-9679-5df58f8d2c0e",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "targetId" : "c3b8d504-56a1-4f92-ae33-7ffe063e5b85",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "targetId" : "d448d98e-2ac9-4bb4-8eed-1943811b8e42",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "targetId" : "b9c0fce9-20a5-46d1-b6b3-003437e206aa",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "targetId" : "62660a2e-4c1d-4a51-bfd8-3c654ba7bd18",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "targetId" : "5e8a01b7-8277-40be-8ec5-1030b077cb1f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "faf9b5be-1f2c-4f06-92f1-38f730171037",
+    "targetId" : "e2b141b8-9e44-41a3-a859-eb72a64cabe9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "89186fc1-b881-4ca0-965d-355fd04d9ebd",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "a1e1cd75-4166-46f1-bf61-05170fe83069",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "b4a5d5e7-dc03-4574-a805-9357a08ee574",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "6367b7ee-e6dc-49ad-bf88-917d7e5bea48",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "34e56902-175b-41a7-b195-0494598e5926",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "544019f2-c881-47c7-874f-862735d86027",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "544019f2-c881-47c7-874f-862735d86027",
+    "targetId" : "b1471d2b-2c47-4daf-beb7-24e5a3c6ffd8",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b1471d2b-2c47-4daf-beb7-24e5a3c6ffd8",
+    "targetId" : "ca2d387a-69b1-4e17-b993-d5850ad958dd",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b1471d2b-2c47-4daf-beb7-24e5a3c6ffd8",
+    "targetId" : "4f451809-d375-4208-b694-3c2f1d54df93",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b1471d2b-2c47-4daf-beb7-24e5a3c6ffd8",
+    "targetId" : "d457e789-3965-4baf-909e-47566e16aa88",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "544019f2-c881-47c7-874f-862735d86027",
+    "targetId" : "9870221b-18a3-4a82-90ee-18883dbe6b18",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "9870221b-18a3-4a82-90ee-18883dbe6b18",
+    "targetId" : "417ae255-2eb6-475d-84a7-db4db87e98e9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "9870221b-18a3-4a82-90ee-18883dbe6b18",
+    "targetId" : "41df844b-76bc-4e77-8626-c3ee13ddfc77",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "9870221b-18a3-4a82-90ee-18883dbe6b18",
+    "targetId" : "285aec0e-009b-48db-a07a-981eff6a81bd",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "f1c07411-f165-4795-a816-cb55de62c073",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "e451496f-f424-4fdc-ae0c-d3c2906c71ad",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "4fcbfe77-0086-454f-8f44-ebccff9e8de3",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "4fcbfe77-0086-454f-8f44-ebccff9e8de3",
+    "targetId" : "2c49ff58-7216-4c4e-9c4e-176a34b83721",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "4fcbfe77-0086-454f-8f44-ebccff9e8de3",
+    "targetId" : "e244f31c-a8d5-47d9-88f6-525eb7dd230d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "4fcbfe77-0086-454f-8f44-ebccff9e8de3",
+    "targetId" : "f73f0200-6aef-438f-87c5-5a721b398425",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "4fcbfe77-0086-454f-8f44-ebccff9e8de3",
+    "targetId" : "4ede5fe3-ef00-4513-bd95-ee2de048b71a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "682cd81a-9db3-404d-ab5c-a4a985e046c8",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "5d1d0932-aa4a-468f-a1dd-5b2bb3e69b91",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "9e05a7bb-fe23-44e9-a035-8ba8d2fb9248",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "f01ce30c-b045-4bc2-9cad-1296997f6736",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "4e048ba9-f6ad-489b-83b4-10abe4410caf",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "c9f106a4-e9ef-4c9c-b4cc-d3b49d51c82a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "4920fed9-401a-42a5-b383-a7175a826187",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "0b39c210-9429-432c-9214-a780adc7795b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "5ccdd3a0-3aab-4dbf-872d-70b18ad5e9ca",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "70c9f0b2-fbde-45ab-a604-c1545b58f560",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "cc5545ab-869a-40fc-8397-bef9966c88b9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "51625530-3d79-456b-a650-41c850a5ef70",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "2e50a127-0946-4758-ba7d-7f7cc957e959",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "b8a06df2-a330-4f58-824e-5255559ea1e3",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "162bc14e-93fe-4565-ad84-9a502dcf9e1c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "8181bb05-40fc-4dea-ae73-387c90dd4c41",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "9c8b1300-c280-4f35-bd56-8fe93d7ba320",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "9f24f56c-3fc7-4459-8dd8-d804305ce344",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0e8a63f-52d4-4706-8746-c7b87584edcb",
+    "targetId" : "8f7b9b52-8164-4080-b2f9-acba78040ba7",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "5d0b88e7-f227-42c4-858d-1b61b9f4dcd6",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "5d0b88e7-f227-42c4-858d-1b61b9f4dcd6",
+    "targetId" : "26622909-51ad-4d4b-9bb5-fc4a597ed0ef",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "26622909-51ad-4d4b-9bb5-fc4a597ed0ef",
+    "targetId" : "95a2d789-d3a6-42c1-abd4-1f1475c8a13d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "26622909-51ad-4d4b-9bb5-fc4a597ed0ef",
+    "targetId" : "09e9763e-d794-4529-ad23-b437a2db7a22",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "26622909-51ad-4d4b-9bb5-fc4a597ed0ef",
+    "targetId" : "f69bbf75-ccaa-4614-bae2-0a3e39ae140c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f69bbf75-ccaa-4614-bae2-0a3e39ae140c",
+    "targetId" : "b9b003de-01f5-4bac-bcfe-8317217946c0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f69bbf75-ccaa-4614-bae2-0a3e39ae140c",
+    "targetId" : "c8ed160d-e099-404e-b195-9b5c757249b6",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f69bbf75-ccaa-4614-bae2-0a3e39ae140c",
+    "targetId" : "d6ba2d96-1d57-45a7-a0f8-e2c638a8055c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "5d0b88e7-f227-42c4-858d-1b61b9f4dcd6",
+    "targetId" : "28dffe57-c60b-43d9-9dc9-7b0d77fc1671",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "28dffe57-c60b-43d9-9dc9-7b0d77fc1671",
+    "targetId" : "480dd12b-e7b2-4c27-8add-f9d34c6d2f49",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "28dffe57-c60b-43d9-9dc9-7b0d77fc1671",
+    "targetId" : "daf14866-cea6-4dd9-95c6-57b4198e3cda",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "daf14866-cea6-4dd9-95c6-57b4198e3cda",
+    "targetId" : "de71eaa5-3011-4fbe-ba2e-73c5d8ef6561",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "daf14866-cea6-4dd9-95c6-57b4198e3cda",
+    "targetId" : "c7f3fb77-afcd-40c2-85e4-8a2400a0ebe5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "e6f968a8-96f8-4a31-88c9-2b418abc16b2",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e6f968a8-96f8-4a31-88c9-2b418abc16b2",
+    "targetId" : "78df2e1a-e8a5-40d6-bc3e-c93ec5b69407",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e6f968a8-96f8-4a31-88c9-2b418abc16b2",
+    "targetId" : "302ff724-9ee2-4fa8-b96a-7b3f90c58f93",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e6f968a8-96f8-4a31-88c9-2b418abc16b2",
+    "targetId" : "006dd16e-6511-44eb-aa6c-a390bf92d07d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "a85c3479-a05b-4f3c-a42d-ebfc4a261cd5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "14f1928f-11e2-4d51-bf6d-e3de0d871d8b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "2169572b-ec0e-48e9-a1ba-444074bfee67",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "27b018eb-856c-4710-84eb-d58db6b320b7",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "5f10d11f-3ed0-4b03-98e4-97ed770dab1b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "d6e8ef65-ef1e-4e0b-9cff-0f0791f72514",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "3c40717a-ad20-40ad-b2b0-c97051bc932f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "1f4682c1-be43-400e-96d7-08144d1f75e5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "6f021a90-9c60-469f-9ec0-9db09ea0675c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "05cc8c4f-3880-431c-b982-b17174d3333d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "d97aaaaf-b7b4-4523-9ce3-f25c736927c0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "41491f50-43ff-4b47-9474-19c227a83b7e",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "1ce8ea2e-ffc0-4f80-a037-ffef1ffa1570",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "d28d22ff-c6d2-4b3b-8057-643954c0191f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "f7585f70-bd84-48ac-8b88-7c50b7dd9aa8",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "05be7652-1f51-4c73-8108-596a5d629f4a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "9f594cd2-f509-4f28-87e2-aa7821e4fc10",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "9f594cd2-f509-4f28-87e2-aa7821e4fc10",
+    "targetId" : "80bb8953-c8da-4d70-a531-28444cc32399",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "9f594cd2-f509-4f28-87e2-aa7821e4fc10",
+    "targetId" : "84d9e6b2-56c7-42a5-b41a-5f7d016acd3f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "9f594cd2-f509-4f28-87e2-aa7821e4fc10",
+    "targetId" : "6cfaf249-67cd-4043-923e-2478a8d43e4f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "77896568-8a3a-4aca-8d5d-446d1b84633f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "f8a391cb-a838-4328-b4e3-c14302bc75db",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "9725548e-287b-4ffb-9fdd-f83ef9c72725",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "d0ba3f0f-9563-4655-9c24-3891e1748971",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "6d9b3741-6b2b-483b-91de-72a29da33f0b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "eddda1ce-faa3-42fb-8a34-d1a6f7831178",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "13e1a9b4-9ede-47d3-9d73-f5620837ee39",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "4421ac57-7fe6-4c01-81b4-55eb912bb8b2",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "1ba46240-8912-4653-bb85-1afd591368e1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "e86792cd-838a-4734-ae84-898846c6ffc5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "349875cd-ba56-4bc5-99af-564d51209472",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "ee270db3-9277-470b-8a59-df88769c06d0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "08467dd0-c48c-45d4-b7a3-d7e7a0575978",
+    "targetId" : "a8b38170-27b3-4d1b-86f1-f256bc0ee126",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "e91ad7c5-7f0e-4911-b891-5e94c0e86cf4",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "77afc406-d239-4e63-9eef-93d97011fc5e",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "35194635-9b9e-419a-aa6a-a6da13987f5a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "524c1214-567e-43f5-bdc2-a712f121cdf1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "ae6667de-d321-4b36-ae67-d6ff3b2db771",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "b2e2cdf4-d9f2-46f1-833c-22050ecbc0f2",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "5ea06cc5-aea1-48ca-a3d5-37970d238ff6",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "9de20468-b0fd-4205-88ce-46b5b72132e0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "15501576-f5c4-443b-b04f-9f216922a8be",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "b0f28347-3111-4da3-a2e6-04f4345b4551",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f8ddd628-99b4-4fd8-ad6e-d4cdbeb35feb",
+    "targetId" : "91181c66-91a6-4127-992e-c37bf02049f0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "a2b1c38c-df9f-46f1-8548-32e905d017ae",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "a2b1c38c-df9f-46f1-8548-32e905d017ae",
+    "targetId" : "e3ed11f2-c349-4cc9-b92b-287984c30350",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "a2b1c38c-df9f-46f1-8548-32e905d017ae",
+    "targetId" : "1eae0f77-f1fe-42db-81ab-05329b6d0e17",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "a2b1c38c-df9f-46f1-8548-32e905d017ae",
+    "targetId" : "f20b870a-1560-4250-bb76-110e3ebd341b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "a2b1c38c-df9f-46f1-8548-32e905d017ae",
+    "targetId" : "c270d481-0095-4087-bd0d-6df6b69fbbbd",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "a2b1c38c-df9f-46f1-8548-32e905d017ae",
+    "targetId" : "e4fd921d-2621-48a1-8217-5b1203efc307",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "7920faae-4205-42cc-b913-8a2c2bd3b0d0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "7920faae-4205-42cc-b913-8a2c2bd3b0d0",
+    "targetId" : "a7c24412-965e-40af-88c4-c508b0ec1967",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "7920faae-4205-42cc-b913-8a2c2bd3b0d0",
+    "targetId" : "18533b52-9cf5-41b0-9eb7-6a8173e328ed",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "7920faae-4205-42cc-b913-8a2c2bd3b0d0",
+    "targetId" : "c9c01657-ef4d-4196-b163-330da71d5c98",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "e14994f8-bfc6-475e-8230-82b0237b8025",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e14994f8-bfc6-475e-8230-82b0237b8025",
+    "targetId" : "94582033-19f0-493c-a10b-987b738603cc",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "26b663db-4d9a-47db-a09e-166fce3aac0d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "8044eaf3-0383-472d-a3a0-46bbf42d0691",
+    "targetId" : "3f43e585-a3d0-4421-b439-5fee26f002d5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "b89a57e9-6742-443c-a00f-e3edea1ea0c3",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "9669034b-641d-444f-9735-5626ec090a3b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "95107dc8-7e99-4251-a8a5-45b71e088cb2",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "6bb9c0f3-a389-4b16-af56-aed9082d5e5c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "1ec626be-7488-4cb4-b3fb-30e4b1b2172a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "4d0e0610-a904-4b02-a869-dc0574190033",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "45d47c71-a5ed-401d-91a3-83e1ce8ed8dd",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "45d47c71-a5ed-401d-91a3-83e1ce8ed8dd",
+    "targetId" : "e910823c-7b9d-44d0-a51e-2629ba3d7a3c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "45d47c71-a5ed-401d-91a3-83e1ce8ed8dd",
+    "targetId" : "c72ec606-8767-42f3-9f62-66494b184e91",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "45d47c71-a5ed-401d-91a3-83e1ce8ed8dd",
+    "targetId" : "a0979163-7c55-41c8-962d-27e8886e1147",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "45d47c71-a5ed-401d-91a3-83e1ce8ed8dd",
+    "targetId" : "5fb5a19e-17fa-4de8-b976-3455230faa91",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "45d47c71-a5ed-401d-91a3-83e1ce8ed8dd",
+    "targetId" : "965e5d80-33a2-4d1e-b7c8-cb94367fbfac",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "4c510fff-ec12-40f4-98a9-e440354eddc0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "a76d4ce1-4bcb-4dbe-9b0a-202217c14774",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "a7a87013-8958-4ca6-82bc-996a341a3e5b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "70acaded-2344-4c42-b472-e786a81d7aad",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "e6e1b5ff-d275-48a7-a812-fe9994aa11ac",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cc62589c-73bb-43cc-a35f-f94b11ea2708",
+    "targetId" : "a6edb299-175c-4c29-8125-c214b5838dfe",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "57025316-a838-4df3-96f8-2e0e0ad566ad",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "19c4bc7e-9926-4a65-9da2-7f142d831e11",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "78f84a0d-f8a6-48bd-96bd-28467aba89cc",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "78f84a0d-f8a6-48bd-96bd-28467aba89cc",
+    "targetId" : "c1398cef-44d1-45f8-84e2-8c4767a61479",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "78f84a0d-f8a6-48bd-96bd-28467aba89cc",
+    "targetId" : "c0e883e5-1ac4-48f3-9957-9c9b6b5b57dd",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "4402ce17-fd03-44f2-8964-633bb8d84967",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "f081deea-df86-4fb9-9343-e9f56a7159f0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "95bbda4b-a01f-4d5c-b141-a56f05f9c4d7",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "f78a9001-bd61-4b68-b13d-008f28dfb569",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "ca8f12c7-9eca-44e6-887a-64e41db40008",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "67a0ca25-7e03-4d81-bd87-990baf3c1c63",
+    "targetId" : "a9bbf44b-567c-4dbf-afe6-70d29f52227a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "ed1e5741-e209-4643-afb3-995186d39df1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "ed1e5741-e209-4643-afb3-995186d39df1",
+    "targetId" : "59ef7e55-f11c-43c7-82d5-8a631b90c8b1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "689f2479-e5c0-4a9a-9ff2-4cf21fae5a05",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "689f2479-e5c0-4a9a-9ff2-4cf21fae5a05",
+    "targetId" : "910b89e3-46f2-44f8-a10a-6822f3d70fbf",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "910b89e3-46f2-44f8-a10a-6822f3d70fbf",
+    "targetId" : "a4d36e4f-e20d-4223-8932-c0cead2fc9a9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "a5ad249e-847d-4cef-b7c6-82e1a5d4aa42",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "c5736323-796a-4ce8-8d8b-a030b5ca25e5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "3e503b5c-41f7-4963-bbb1-e1e25dcff299",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3e503b5c-41f7-4963-bbb1-e1e25dcff299",
+    "targetId" : "fa04161b-38aa-4173-97fb-6f44df1436e6",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "c064844b-ecce-485a-bf2b-98c8bc8ca207",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "2955f392-6e60-4203-b112-f99d2c9b7c07",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "297bb3f6-b3cd-42db-9988-1f83642bfe78",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "ec278d82-1f0a-4c9a-a3e3-aef5c4677f02",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "3b1f2011-f725-4add-92f9-6e9e7a733450",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3b1f2011-f725-4add-92f9-6e9e7a733450",
+    "targetId" : "32b134ca-5868-4889-9b7d-4194857337b1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "04f527c8-f507-4962-9903-0189570cbc6d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "b0d1b872-5ff6-4459-8bff-fcd13c5fced9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0d1b872-5ff6-4459-8bff-fcd13c5fced9",
+    "targetId" : "b9cfef61-cb33-400c-b2e9-803899af9297",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b0d1b872-5ff6-4459-8bff-fcd13c5fced9",
+    "targetId" : "fae001ec-b55d-4bfd-a014-cd2ec1d22e7c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "25d6a61d-cd3d-441d-9a4b-4472da87762e",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "c4e2660d-2b3d-4f1a-9c89-95c04632ce4f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "c4e2660d-2b3d-4f1a-9c89-95c04632ce4f",
+    "targetId" : "417cacd3-bbdf-486c-8e11-d68089200c41",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "5a2d8904-e69f-45a0-9374-b048f86d19a8",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "ff6be961-bf80-4743-9134-b011a59cc869",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "f021c2fc-2aa5-407f-8738-3cb9d919670d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "0814175c-e4eb-491e-b19d-3980244cc601",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "5e1fad63-43bf-418d-8e32-1a5b92b78fd1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "3109cc7a-a233-480a-a66c-f779ddbbda03",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "135e3c97-f62f-4da0-8dc5-b33cd577b771",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "135e3c97-f62f-4da0-8dc5-b33cd577b771",
+    "targetId" : "5b627f7d-7a1b-4e68-a0f8-c87a26057e4d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "862e1d98-8676-4b45-a15a-d69c968445f5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "862e1d98-8676-4b45-a15a-d69c968445f5",
+    "targetId" : "b016a359-3055-415e-8caf-c43e2ae00dd7",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "d28c6575-5074-4c59-af6d-10e123295a2f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "3debfcdb-d836-4c13-b33d-369f5e8314cc",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "9602f74d-222d-4ba7-aff3-adda5f9a4cf8",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "ff4e46d3-5599-40b7-b4fe-d0257ecd59a5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "ff4e46d3-5599-40b7-b4fe-d0257ecd59a5",
+    "targetId" : "e445ae5b-0af7-4ff7-88f1-29cfff03e1dd",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "c8aebe97-1c64-48bc-9802-279c8cc1a0e5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "81863ec2-3d03-42bb-a4e2-4528b079552e",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "6cfa7b66-8f09-4bff-a4c4-ab2a0c34f3b5",
+    "targetId" : "7c35af60-3b1e-414f-a1b6-12f1db55622f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "73fc17c7-ad3b-431f-9198-9322f85ff5e7",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "73fc17c7-ad3b-431f-9198-9322f85ff5e7",
+    "targetId" : "e4639bf6-422d-41c0-bf99-4ea40a5c829a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "73fc17c7-ad3b-431f-9198-9322f85ff5e7",
+    "targetId" : "f350132d-c470-4332-b60c-e6e858e646bc",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "78818742-69c9-4e89-ad1f-960f281cec78",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "78818742-69c9-4e89-ad1f-960f281cec78",
+    "targetId" : "4fe88338-f26b-412f-ae4e-cbd682a8a778",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "78818742-69c9-4e89-ad1f-960f281cec78",
+    "targetId" : "218fcb30-ff64-4c58-8a18-a6debca7ed41",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "78818742-69c9-4e89-ad1f-960f281cec78",
+    "targetId" : "2d8d2471-0876-4828-8b19-97a25c018697",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "f331a13c-fa77-46a2-9aa8-57eb409b7fe5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "9cfb68a6-b69c-491a-ad72-3d008f47a488",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "9cfb68a6-b69c-491a-ad72-3d008f47a488",
+    "targetId" : "cf8b2ce6-6e0f-4da3-8c88-3f938ca1ac14",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "8dc7b49a-f972-49c8-af2c-f234426ff010",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "d1253101-084b-495b-8299-b0a4c7cd24f9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "2c8d38b8-dafc-4df2-81cb-b183db9a0678",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "467ea1dc-6d01-4dbe-ae85-c97632a07fde",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "fec808aa-f095-4224-ac74-3d54f3d4dd5f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "e841ebf0-40d7-45c3-9549-873a6e6106d3",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "30491c36-4b5d-4587-8deb-e8b62ac4c4b0",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "cfdce1fb-29e1-4907-a3c1-40abc172c5c4",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "3ca874a0-bb25-437b-ba5c-9ffc4c1132fb",
+    "targetId" : "7029b7f7-af79-4e88-ae37-c974aa6055b1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "c3b9a41b-808b-418f-823a-04efe7e63aea",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "6cecceb7-7b3b-4bee-9fb1-de0d259ebba1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "5444d49d-b251-4718-9cd9-e959b4f6d559",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "5444d49d-b251-4718-9cd9-e959b4f6d559",
+    "targetId" : "f034216d-766e-42ca-8e9e-a231cda6db03",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "3b44dc4f-5383-4f09-884f-1be0c458f711",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "3675941c-ff59-461b-904f-70a93014334a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "b1d22bf7-36eb-48bb-a0b6-a820b2e351b3",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "3202e428-3d9d-4cf3-93e0-5e6c886901ef",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "b4e1ea2b-a03d-4f11-82bc-315e72302bf9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "005b92ef-9da0-4af8-aac2-43dd8aad0e9b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "b9f32424-6bd6-4df9-a0a2-9794adaf6e40",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "89cfee3e-1476-4c04-97d4-4bda862c715e",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "cd3b1dd7-467f-443d-95c7-be94885d8890",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cd3b1dd7-467f-443d-95c7-be94885d8890",
+    "targetId" : "0af60bc1-c523-47de-a25e-80aebc2abed4",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cd3b1dd7-467f-443d-95c7-be94885d8890",
+    "targetId" : "807f99e7-89e5-4976-9cb2-42d7da494a79",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "cd3b1dd7-467f-443d-95c7-be94885d8890",
+    "targetId" : "290a02fe-7047-4e6b-9440-5ceddd809371",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "targetId" : "be43f8be-160b-449a-9c36-b78cbcde816c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "targetId" : "2aa713d4-0a15-4e34-82ed-665cbee6c850",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "targetId" : "3f845a08-82fa-488f-8828-ad6e97342987",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "targetId" : "4fe3d692-44c7-47e7-8058-de061220c0e9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "targetId" : "f051b6e4-8777-4af1-8dc6-040d622c4842",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "targetId" : "91afb15e-3202-492c-83ea-2327258c57d3",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "803878b0-ebc1-4bd2-a552-660fcd6f37f9",
+    "targetId" : "cd7675b9-2898-478f-932c-7a29ebe9c7aa",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "f5f08796-2f52-4f1d-8257-55e2f3f12a0b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f5f08796-2f52-4f1d-8257-55e2f3f12a0b",
+    "targetId" : "aac3a514-efd7-4205-b05c-76f634859a26",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f5f08796-2f52-4f1d-8257-55e2f3f12a0b",
+    "targetId" : "a0b105c8-555a-4093-8e06-f9ff453802f8",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f5f08796-2f52-4f1d-8257-55e2f3f12a0b",
+    "targetId" : "ac8d79d4-6809-4988-b109-161c8057925c",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f5f08796-2f52-4f1d-8257-55e2f3f12a0b",
+    "targetId" : "38457acc-005c-405c-a18b-5cfd4730f8b1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f5f08796-2f52-4f1d-8257-55e2f3f12a0b",
+    "targetId" : "5f9c61ec-d1cf-41da-bc19-b52d5c7c76c2",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "16a8886f-2b8b-4bbb-9203-09641307add6",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "16a8886f-2b8b-4bbb-9203-09641307add6",
+    "targetId" : "96d3f95b-0c5a-4a7c-a21b-65f32259f866",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "0ace798d-8d5e-4021-94f4-2613f2465f8b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "0ace798d-8d5e-4021-94f4-2613f2465f8b",
+    "targetId" : "7adec2cd-2ed3-4030-80af-11914b1ee167",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "0ace798d-8d5e-4021-94f4-2613f2465f8b",
+    "targetId" : "40bf80a5-2e8f-4032-b01e-d459beb995b1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "0ace798d-8d5e-4021-94f4-2613f2465f8b",
+    "targetId" : "9aa76c8b-fcbf-4bb8-b922-f64fc998e9ab",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "0ace798d-8d5e-4021-94f4-2613f2465f8b",
+    "targetId" : "3e16e606-ecd8-4977-a024-6f4feb553be2",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "19e1aea5-9437-4964-b160-76f991f7d316",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "1f6d7bc4-5b42-4201-88e1-ee19bce4717f",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "72569df3-5dad-42dc-99fa-847aabfd2083",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "eceaf1fd-bd6d-43f5-99fb-6480d9a1765b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "11736e26-69a6-41d7-84a7-dd5941bb6381",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "c43535b6-4127-4180-8517-1723a747eeff",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "6ee10214-03c5-413a-a5d9-700633515b39",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "210f218f-ccc4-4f05-8ae8-6ad44a4c4f16",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "fed911a9-13e2-4829-82a3-d2b3bccac616",
+    "targetId" : "97349faa-2108-482f-ac53-ad977f2714d4",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "ce41a482-16b2-45cc-af7f-743d8cb8bbb9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "ce41a482-16b2-45cc-af7f-743d8cb8bbb9",
+    "targetId" : "107730db-3064-4a1d-a3b4-7c3a83193929",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "ce41a482-16b2-45cc-af7f-743d8cb8bbb9",
+    "targetId" : "c050bf31-6a72-4d70-a266-2b9ea184528b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "c050bf31-6a72-4d70-a266-2b9ea184528b",
+    "targetId" : "70b5d17c-559a-45a9-b9a5-05ef5ffc2dd9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "c050bf31-6a72-4d70-a266-2b9ea184528b",
+    "targetId" : "ac880936-97a7-45f2-918e-19ed8fc18136",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "ce41a482-16b2-45cc-af7f-743d8cb8bbb9",
+    "targetId" : "c1783f9b-b13d-4462-a0b5-b71378de29b9",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "ce41a482-16b2-45cc-af7f-743d8cb8bbb9",
+    "targetId" : "f9f5e670-6703-4427-b4f1-a1cbf42aa804",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "e6e477aa-50f3-425c-b823-ef125267a57a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e6e477aa-50f3-425c-b823-ef125267a57a",
+    "targetId" : "479b4738-2d60-420d-9e23-f692158001b4",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e6e477aa-50f3-425c-b823-ef125267a57a",
+    "targetId" : "e97c8871-c5ed-436a-93cc-2439565b0b09",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e6e477aa-50f3-425c-b823-ef125267a57a",
+    "targetId" : "7d031104-e362-4692-92bc-eae53acb5045",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "e6e477aa-50f3-425c-b823-ef125267a57a",
+    "targetId" : "d062348a-0f72-4e22-830f-aa67bbdf8c36",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "16f5e9af-2883-4643-a948-2a84d86a0cfe",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "16f5e9af-2883-4643-a948-2a84d86a0cfe",
+    "targetId" : "4b067df3-2e70-4b99-9381-5eec2641de0a",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "16f5e9af-2883-4643-a948-2a84d86a0cfe",
+    "targetId" : "89500fc9-d45e-425b-b3dd-a9f25cf528ac",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "16f5e9af-2883-4643-a948-2a84d86a0cfe",
+    "targetId" : "50ffc2f1-1cba-4c5d-b9ce-51c5a2818677",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "59b807a9-cebb-41ce-ab32-f41b7c6ce7b4",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "066d2422-e151-42cc-8d79-e8fb50f5bab6",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "ded540a4-2077-40b1-9c53-36cdb710c423",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "4b39e5c6-99f6-4383-9f41-d2f0f06c3f99",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "0230947b-6c83-45dd-9896-e1ca47c1d813",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "da310f1d-7e8b-477d-821a-668953d941bb",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "aea55028-80be-4179-afbd-48a5057a85d5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "975cc4fe-8eb3-484e-b5b1-bfffc9d461d3",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "975cc4fe-8eb3-484e-b5b1-bfffc9d461d3",
+    "targetId" : "1ddeabba-3130-461d-a6b6-7613b2336610",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "975cc4fe-8eb3-484e-b5b1-bfffc9d461d3",
+    "targetId" : "c834bd52-1c97-4fe3-a4e2-48baed9b67b1",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "975cc4fe-8eb3-484e-b5b1-bfffc9d461d3",
+    "targetId" : "080fafff-35ec-498d-a4b8-723d20445490",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "975cc4fe-8eb3-484e-b5b1-bfffc9d461d3",
+    "targetId" : "3244d794-39a2-4bca-86c6-584876664d3d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "6e77c2c8-3b7d-4e4e-bff9-3baf9b01dd55",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "559f2106-b3a4-4d1a-b063-dae48c2dbda5",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "7b6d19ae-fba6-44da-baff-86f620a4cdd2",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "3cb92628-449d-4da5-83d5-ae172d8e6963",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "274842d7-416d-417e-8992-b6486963ce0d",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "af5e3166-33a5-4204-9aa2-db48e8b0631e",
+    "targetId" : "c101bae0-f233-48fb-b3d4-d820b1581a0b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "c101bae0-f233-48fb-b3d4-d820b1581a0b",
+    "targetId" : "a07e51ec-226e-45f2-8e77-8afe5e983acb",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "c101bae0-f233-48fb-b3d4-d820b1581a0b",
+    "targetId" : "5e3fe557-c71f-4356-aa47-49a18943049b",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "b02999ae-6400-4549-a940-4b05475ed540",
+    "targetId" : "f06443d0-3ce1-41f4-9ce4-17026c7b7d60",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f06443d0-3ce1-41f4-9ce4-17026c7b7d60",
+    "targetId" : "6a0561fd-9a12-4c97-afb1-2a05c6be6f84",
+    "label" : "HAS_SECTION"
+  }, {
+    "sourceId" : "f06443d0-3ce1-41f4-9ce4-17026c7b7d60",
+    "targetId" : "78c5bcf1-b218-4dae-9462-b6991d85f844",
+    "label" : "HAS_SECTION"
+  } ]
+}

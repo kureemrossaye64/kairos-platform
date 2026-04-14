@@ -26,36 +26,45 @@
 			<groupId>com.kairos</groupId>
 			<artifactId>kairos-storage</artifactId>
 		</dependency>
-		
-		
-		<!-- Apache Tika for document parsing (extracting text from PDF, DOCX
-		etc.) -->
+		<dependency>
+			<groupId>me.xdrop</groupId>
+			<artifactId>fuzzywuzzy</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.bitbucket.cowwoc</groupId>
+			<artifactId>diff-match-patch</artifactId>
+			<version>1.2</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.tika</groupId>
 			<artifactId>tika-core</artifactId>
-			<version>3.2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tika</groupId>
 			<artifactId>tika-parser-pdf-module</artifactId>
-			<version>3.2.2</version>
 		</dependency>
 		<!--
 		https://mvnrepository.com/artifact/org.apache.tika/tika-parser-miscoffice-module -->
 		<dependency>
 			<groupId>org.apache.tika</groupId>
 			<artifactId>tika-parser-miscoffice-module</artifactId>
-			<version>3.2.2</version>
 		</dependency>
 		<dependency>
-			<groupId>io.hypersistence</groupId>
-			<artifactId>hypersistence-utils-hibernate-60</artifactId>
-			<version>3.7.2</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		<dependency>
+			<groupId>org.jgrapht</groupId>
+			<artifactId>jgrapht-core</artifactId>
+			<version>1.5.2</version>
+
+		</dependency>
+
 	</dependencies>
 </project>

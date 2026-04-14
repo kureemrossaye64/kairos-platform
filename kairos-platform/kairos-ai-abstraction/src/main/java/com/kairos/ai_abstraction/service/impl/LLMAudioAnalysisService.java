@@ -43,7 +43,7 @@ public class LLMAudioAnalysisService implements AudioAnalysisService {
 
             // 3. Call the Gemini model
             log.debug("Sending transcription request to Gemini model...");
-            AiMessage aiMessage = transcriptionModel.chat(userMessage).aiMessage();
+            AiMessage aiMessage = transcriptionModel.getModel().chat(userMessage).aiMessage();
             log.info("Received transcription response from Gemini.");
 
             // 4. Return the text content

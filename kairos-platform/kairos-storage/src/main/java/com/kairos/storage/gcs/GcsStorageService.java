@@ -19,12 +19,11 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class GcsStorageService implements StorageService {
 
-    private final Storage gcsClient;
-    private final GcsProperties properties;
+	private final Storage gcsClient;
+    private final String bucketName;
 
     @Override
     public String upload(InputStream inputStream, String fileName, String contentType) {
-        String bucketName = properties.getBucketName();
         BlobId blobId = BlobId.of(bucketName, fileName);
         BlobInfo blobInfo = BlobInfo.newBuilder(blobId).setContentType(contentType).build();
 

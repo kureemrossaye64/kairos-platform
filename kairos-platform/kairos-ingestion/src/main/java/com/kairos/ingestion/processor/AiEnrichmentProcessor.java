@@ -2,8 +2,6 @@ package com.kairos.ingestion.processor;
 
 import java.util.stream.Stream;
 
-import org.springframework.stereotype.Component;
-
 import com.kairos.core.ai.TextAnalysisService;
 import com.kairos.core.ai.TextAnalysisService.TextAnalysisResult;
 import com.kairos.ingestion.pipeline.Processor;
@@ -13,7 +11,6 @@ import dev.langchain4j.data.segment.TextSegment;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Component
 @Slf4j
 @RequiredArgsConstructor
 public class AiEnrichmentProcessor implements Processor<TextSegment, TextSegment> {
@@ -23,7 +20,7 @@ public class AiEnrichmentProcessor implements Processor<TextSegment, TextSegment
    
    @Override
    public Stream<TextSegment> process(Stream<TextSegment> sourceRecordStream) {
-       log.info("Applying audio transcription processor...");
+       log.info("Applying ai enrichment processor processor...");
        return sourceRecordStream.flatMap(segment -> {
            try {
         	   

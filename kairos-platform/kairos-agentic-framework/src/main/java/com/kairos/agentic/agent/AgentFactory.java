@@ -1,18 +1,20 @@
 package com.kairos.agentic.agent;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
-import org.springframework.stereotype.Service;
 
+import com.kairos.agentic.conversational.ConversationalIngestionTool;
 import com.kairos.agentic.tools.KairosTool;
 import com.kairos.agentic.tools.ToolSpecifications;
+import com.kairos.agentic.transactional.TransactionalTool;
+import com.kairos.core.agentic.ConversationContexProvider;
 import com.kairos.core.ai.ChatLanguageModel;
 
 import dev.langchain4j.agent.tool.ToolSpecification;
-import dev.langchain4j.memory.chat.MessageWindowChatMemory;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.tool.ToolExecutor;
 import lombok.RequiredArgsConstructor;
@@ -23,16 +25,13 @@ import lombok.extern.slf4j.Slf4j;
  * This class encapsulates the logic of discovering tools and wiring them into a
  * LangChain4j AiService.
  */
-@Service
 @RequiredArgsConstructor
 @Slf4j
 public class AgentFactory {
 
     private final ApplicationContext context; // Used to discover @KairosTool beans
     private final ChatLanguageModel chatLanguageModel;
-
-    @Value("${kairos.are.enabled:false}")
-    private boolean isAreEnabled;
+    private final ConversationContexProvider contextProvider;
     
    
     
@@ -41,12 +40,27 @@ public class AgentFactory {
      * @param systemPrompt The system prompt that defines the agent's persona and mission.
      * @return A fully configured AiAgent instance.
      */
-    public AiAgent createAgent(String systemPrompt) {
-        Collection<Object> tools = context.getBeansWithAnnotation(KairosTool.class).values();
-        var chatMemory = MessageWindowChatMemory.withMaxMessages(20);
+    public AiAgent createAgent(String systemPrompt, String sessionId) {
+        Collection<Object> tools_ = context.getBeansWithAnnotation(KairosTool.class).values();
+        var chatMemory = contextProvider.getChatMemory(sessionId);
         Map<ToolSpecification, ToolExecutor> tool = new ToolSpecifications(context).getSpecifications();
         
-        
+        List<Object> tools = new ArrayList<Object>();
+        if(tool.isEmpty()) {
+        	for(Object t : tools_) {
+        		if( t instanceof ConversationalIngestionTool) {
+        			continue;
+        		}
+        		
+        		if(t instanceof TransactionalTool) {
+        			continue;
+        		}
+        		tools.add(t);
+        	}
+        	
+        }else {
+        	tools.addAll(tools_);
+        }
          
        
         
@@ -81,27 +95,14 @@ public class AgentFactory {
         
         
         return AiServices.builder(AiAgent.class)
-                .chatModel(chatLanguageModel)
+                .chatModel(chatLanguageModel.getModel())
                 .systemMessageProvider((o)->{ return systemPrompt;})
                 .tools(tool)
                 .tools(tools.toArray())
                 .chatMemory(chatMemory)
+                .chatMemoryProvider(null)
                 .build();
     }
     
-     /**
-     * Creates a new conversational agent equipped with a specific set of tools.
-     *
-     * @param tools A list of tool objects to be used by the agent.
-     * @return A fully configured AiAgent instance.
-     */
-    public AiAgent createAgent(Object... tools) {
-        var chatMemory = MessageWindowChatMemory.withMaxMessages(20);
-
-        return AiServices.builder(AiAgent.class)
-                .chatModel(chatLanguageModel)
-                .tools(tools)
-                .chatMemory(chatMemory)
-                .build();
-    }
+     
 }

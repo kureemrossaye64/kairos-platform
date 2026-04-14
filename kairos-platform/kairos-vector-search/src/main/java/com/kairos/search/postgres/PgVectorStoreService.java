@@ -2,6 +2,7 @@ package com.kairos.search.postgres;
 
 import java.lang.reflect.Field;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -22,6 +23,7 @@ import com.kairos.core.search.SearchableField;
 import com.kairos.core.search.VdbDocument;
 import com.kairos.core.search.VectorSearcheable;
 import com.kairos.core.search.VectorStoreService;
+import com.kairos.search.AbstractVectorStoreService;
 import com.pgvector.PGvector;
 
 import dev.langchain4j.data.document.Metadata;
@@ -35,45 +37,93 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@AllArgsConstructor
-public class PgVectorStoreService implements VectorStoreService {
 
-    private final EmbeddingStore<TextSegment> embeddingStore;
+public class PgVectorStoreService extends AbstractVectorStoreService implements VectorStoreService {
+
     
-    private final EmbeddingModel embeddingModel;
-    
-    private final JdbcTemplate jdbcTemplate;
-    
-    // For building SQL queries
     private final PgVectorQueryBuilder queryBuilder;
     
-    private final ObjectMapper mapper;
+    
+    
+    public PgVectorStoreService(JdbcTemplate jdbcTemplate, EmbeddingModel embeddingModel,
+			EmbeddingStore<TextSegment> embeddingStore, ObjectMapper mapper, PgVectorQueryBuilder queryBuilder) {
+		super(jdbcTemplate, embeddingModel, embeddingStore, mapper);
+		this.queryBuilder = queryBuilder;
+		// TODO Auto-generated constructor stub
+	}
 
-    // --- LangChain4j Delegated Methods ---
+	public List<VdbDocument> findHybrid(String queryText, int topK, Class<?> entityClass) {
+        SearchQuery query = SearchQuery.builder().textQuery(queryText).build();
+        PgVectorQueryBuilder.PreparedQuery preparedQuery = queryBuilder.buildHybridSearchQuery(query, entityClass, embeddingModel, topK);
 
-    @Override
-    public void addDocument(VdbDocument document) {
-        log.info("Adding document with id: {} to pgvector.", document.getId());
-        TextSegment segment = TextSegment.from(document.getContent(), toLangChainMetadata(document));
-        Embedding embedding = embeddingModel.embed(segment).content();
-        embeddingStore.add(embedding, segment);
+        // We query IDs first based on hybrid score
+        List<Map<String,Object>> mids = jdbcTemplate.queryForList(
+            preparedQuery.getSql(),
+            //UUID.class,
+            preparedQuery.getParams()
+        );
+        
+        List<UUID> ids = mids.stream().map(m -> (UUID)m.get("id")).collect(Collectors.toList());
+
+        if (ids.isEmpty()) return List.of();
+
+        // Fetch actual content (preferring parent_content)
+        String tableName = entityClass.getAnnotation(Searchable.class).indexName();
+        String placeholders = ids.stream().map(i -> "?").collect(Collectors.joining(","));
+        
+        String fetchSql = String.format(
+            "SELECT embedding_id, text, parent_content, source_filename, summary, topics, hypothetical_questions, section_type, hierarchy_context, page_number FROM %s WHERE embedding_id IN (%s)", 
+            tableName, placeholders
+        );
+
+        return jdbcTemplate.query(fetchSql, ids.toArray(), (rs, rowNum) -> {
+            String content = rs.getString("text");
+            String parentContent = rs.getString("parent_content");
+            String filename = rs.getString("source_filename");
+            String textToUse = (parentContent != null && !parentContent.isBlank()) ? parentContent : content;
+            
+            String summary = rs.getString("summary");
+            String topics = rs.getString("topics");
+            String questions = rs.getString("hypothetical_questions");
+            String sectionType = rs.getString("section_type");
+            String hierarchy_context = rs.getString("hierarchy_context");
+            
+            Map<String,Object> metadata = new HashMap<String, Object>();
+            if(summary != null) {
+            	metadata.put("summary", summary);
+            	
+            }
+            if(topics != null) {
+            	metadata.put("topics", topics);
+            }
+            
+            if(questions != null) {
+            	metadata.put("hypothetical_questions", questions);
+            }
+            
+            if(sectionType != null) {
+            	metadata.put("section_type", sectionType);
+            }
+            
+            if(filename != null) {
+            	metadata.put("source_filename", filename);
+            }
+            
+            if(hierarchy_context != null) {
+            	metadata.put("hierarchy_context", hierarchy_context);
+            }
+            
+            return VdbDocument.builder()
+                    .id(UUID.fromString(rs.getString("embedding_id")))
+                    .content(textToUse) 
+                    .metadata(metadata)
+                    .build();
+        });
     }
 
-    @Override
-    public void addDocuments(List<VdbDocument> documents) {
-        log.info("Adding {} documents in batch to pgvector.", documents.size());
-        List<TextSegment> segments = documents.stream()
-                .map(doc -> TextSegment.from(doc.getContent(), toLangChainMetadata(doc)))
-                .collect(Collectors.toList());
-
-        List<Embedding> embeddings = embeddingModel.embedAll(segments).content();
-        embeddingStore.addAll(embeddings, segments);
-    }
-
-    @Override
     public List<VdbDocument> findRelevant(String queryText, int topK) {
         log.debug("Finding top {} relevant documents for query: '{}'", topK, queryText);
-        Embedding queryEmbedding = embeddingModel.embed(queryText).content();
+        Embedding queryEmbedding = embeddingModel.getModel().embed(queryText).content();
 
         EmbeddingSearchRequest request = EmbeddingSearchRequest.builder()
                 .queryEmbedding(queryEmbedding)
@@ -93,7 +143,6 @@ public class PgVectorStoreService implements VectorStoreService {
 
     // --- Direct JDBC Methods for Hybrid Search & Indexing ---
 
-    @Override
     public void index(UUID documentId, Object document) {
     	 Class<?> entityClass = document.getClass();
          Searchable searchable = entityClass.getAnnotation(Searchable.class);
@@ -156,7 +205,7 @@ public class PgVectorStoreService implements VectorStoreService {
         }
         String tableName = searchable.indexName();
         String geoFieldName = findAnnotatedFieldName(entityClass, GeoPointField.class);
-        int dimension = embeddingModel.dimension();
+        int dimension = embeddingModel.getModel().dimension();
 
         log.info("Generating DDL for search index table '{}' from entity {}", tableName, entityClass.getSimpleName());
 
@@ -188,7 +237,6 @@ public class PgVectorStoreService implements VectorStoreService {
         log.info("Table and indexes for '{}' are ready.", tableName);
     }
     
-    @Override
     public SearchResult search(SearchQuery query, Class<?> entityClass) {
     	try {
             int resultLimit = 20; // Default limit
@@ -221,89 +269,5 @@ public class PgVectorStoreService implements VectorStoreService {
         }
     }
 
-    @Override
-    public void delete(Class<?> entityClass, UUID documentId) {
-    	String indexName = getTableName(entityClass);
-    	log.info("Deleting document {} from table '{}'", documentId, indexName);
-        String sql = String.format("DELETE FROM %s WHERE id = ?", indexName);
-        jdbcTemplate.update(sql, documentId);
-    }
-
-    @Override
-    public void deleteAll(Class<?> entityClass, List<UUID> documentIds) {
-    	String indexName = getTableName(entityClass);
-        log.info("Deleting {} documents from table '{}'", documentIds.size(), indexName);
-        String idsPlaceholder = documentIds.stream().map(id -> "?").collect(Collectors.joining(","));
-        String sql = String.format("DELETE FROM %s WHERE id IN (%s)", indexName, idsPlaceholder);
-        jdbcTemplate.update(sql, documentIds.toArray());
-    }
-
-    // --- Helper Methods ---
-
-    private void addEmbedding(VectorSearcheable vs) {
-        String textContent = getTextContent(vs);
-        if (textContent != null && !textContent.isBlank()) {
-            float[] embedding = embeddingModel.embed(textContent).content().vector();
-            vs.setTextEmbedding(embedding);
-        }
-    }
-
-    private String getTextContent(Object document) {
-        if (!document.getClass().isAnnotationPresent(Searchable.class)) {
-            try {
-                return mapper.writeValueAsString(document);
-            } catch (JsonProcessingException e) {
-                log.error("Error serializing non-searchable object to string for embedding", e);
-                return "";
-            }
-        }
-
-        try {
-            Map<String, Object> vals = mapper.convertValue(document, new TypeReference<>() {});
-            StringBuilder b = new StringBuilder();
-            for (Field field : document.getClass().getDeclaredFields()) {
-                if (field.isAnnotationPresent(SearchableField.class)) {
-                    Object value = vals.get(field.getName());
-                    if (value != null) {
-                        b.append(value).append(" ");
-                    }
-                }
-            }
-            return b.toString().trim();
-        } catch (Exception e) {
-            log.error("Error reflecting fields to build text content for embedding", e);
-            return "";
-        }
-    }
     
-    private Metadata toLangChainMetadata(VdbDocument document) {
-        Metadata metadata = new Metadata();
-        document.getMetadata().forEach((key, value) -> metadata.put(key, value.toString()));
-        metadata.put("internal_id", document.getId().toString());
-        metadata.put("entity", "vsearch");
-        return metadata;
-    }
-
-    @SuppressWarnings("unchecked")
-	private String findAnnotatedFieldName(Class<?> clazz, @SuppressWarnings("rawtypes") Class annotation) {
-        return Arrays.stream(clazz.getDeclaredFields())
-                .filter(field -> field.isAnnotationPresent(annotation))
-                .map(Field::getName)
-                .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Missing @" + annotation.getSimpleName() + " annotation on class " + clazz.getName()));
-    }
-
-    private Object getFieldValue(Object obj, String fieldName) throws NoSuchFieldException, IllegalAccessException {
-        Field field = obj.getClass().getDeclaredField(fieldName);
-        field.setAccessible(true);
-        return field.get(obj);
-    }
-    
-    private String getTableName(Class<?> entityClass) {
-        Searchable searchableAnnotation = entityClass.getAnnotation(Searchable.class);
-        if (searchableAnnotation == null || searchableAnnotation.indexName().isBlank()) {
-            throw new IllegalArgumentException("Class " + entityClass.getName() + " is not annotated with @Searchable or indexName is empty.");
-        }
-        return searchableAnnotation.indexName();
-    }
 }

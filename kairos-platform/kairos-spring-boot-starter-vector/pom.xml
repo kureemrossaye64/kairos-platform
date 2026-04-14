@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.kairos</groupId>
+        <artifactId>kairos-platform</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>kairos-spring-boot-starter-vector</artifactId>
+    <packaging>jar</packaging>
+    
+    <name>KAIROS Spring Boot Starter - Vector Search</name>
+    <description>
+        Provides semantic search capabilities via vector embeddings.
+        Supports PgVector (PostgreSQL) for production and In-Memory for development.
+        Typically used with kairos-spring-boot-starter-agent for RAG.
+    </description>
+
+    <dependencies>
+        <!-- Core Starter -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-spring-boot-starter-core</artifactId>
+        </dependency>
+
+        <!-- Vector Search Module -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-vector-search</artifactId>
+        </dependency>
+
+        <!-- AI (for Embeddings) -->
+        <dependency>
+            <groupId>com.kairos</groupId>
+            <artifactId>kairos-ai-abstraction</artifactId>
+        </dependency>
+
+        <!-- PgVector Support -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Jackson for JSON handling in vector metadata -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+
+        <!-- Apache Tika for content extraction -->
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+        </dependency>
+    </dependencies>
+</project>

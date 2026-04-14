@@ -6,7 +6,6 @@ import java.util.stream.Stream;
 
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
-import org.springframework.stereotype.Component;
 
 import com.kairos.core.ingestion.SourceRecord;
 import com.kairos.core.storage.StorageService;
@@ -21,7 +20,6 @@ import lombok.extern.slf4j.Slf4j;
  * A Processor that uses Apache Tika to parse various file types (PDF, DOCX, etc.)
  * and extracts their text content into a LangChain4j Document.
  */
-@Component
 @Slf4j
 @RequiredArgsConstructor
 public class TikaDocumentParserProcessor implements Processor<SourceRecord, Document> {
@@ -43,7 +41,7 @@ public class TikaDocumentParserProcessor implements Processor<SourceRecord, Docu
                 // 2. Add system-generated metadata.
                 metadata.put("source_filename", request.getSourceName());
                 metadata.put("content_type", request.getContentType());
-                metadata.put("parser", "Tika");
+                metadata.put("processor", "TikaDocumentParserProcessor");
                 
                 // 3. Parse the document content.
                 String content = tika.parseToString(is);

@@ -1,8 +1,6 @@
 package com.kairos.core.search;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * High-level interface for interacting with the vector store.
@@ -29,20 +27,20 @@ public interface VectorStoreService {
      * @param topK The maximum number of similar documents to return.
      * @return A list of VdbDocument objects representing the most relevant results.
      */
-    List<VdbDocument> findRelevant(String queryText, int topK);
+    //List<VdbDocument> findRelevant(String queryText, int topK);
     
-    public void createIndexWithMapping(Class<?> entityClass)throws IOException;
+    //public List<VdbDocument> findHybrid(String queryText, int topK, Class<?> entityClass);
     
+    //public void createIndexWithMapping(Class<?> entityClass)throws IOException;
     
-    void index(UUID documentId, Object document);
+    //void index(UUID documentId, Object document);
     
+    //void delete(Class<?> entityClass, UUID documentId);
     
-    void delete(Class<?> entityClass, UUID documentId);
-    
-    public void deleteAll(Class<?> entityClass, List<UUID> documentIds);
+    //public void deleteAll(Class<?> entityClass, List<UUID> documentIds);
     
     // --- Unified Search Method ---
-    SearchResult search(SearchQuery query, Class<?> entityClass);
+    //SearchResult search(SearchQuery query, Class<?> entityClass);
     
-    public SearchResult vectorSearch(SearchQuery query, Class<?> entityClass, int neighbours);
+    //public SearchResult vectorSearch(SearchQuery query, Class<?> entityClass, int neighbours);
 }

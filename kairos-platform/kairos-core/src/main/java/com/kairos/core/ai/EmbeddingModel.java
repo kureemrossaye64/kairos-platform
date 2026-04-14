@@ -7,6 +7,8 @@ package com.kairos.core.ai;
  * This interface decoules our application from the specific provider.
  * Like the ChatLanguageModel, we extend the LangChain4j interface for compatibility.
  */
-public interface EmbeddingModel extends dev.langchain4j.model.embedding.EmbeddingModel {
+public interface EmbeddingModel  {
+	
+	public  dev.langchain4j.model.embedding.EmbeddingModel getModel();
     
 }

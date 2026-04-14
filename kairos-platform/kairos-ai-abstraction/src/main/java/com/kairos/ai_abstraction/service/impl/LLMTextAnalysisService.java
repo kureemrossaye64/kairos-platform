@@ -8,7 +8,7 @@ import com.kairos.core.ai.TextAnalysisService;
 import dev.langchain4j.service.AiServices;
 import dev.langchain4j.service.SystemMessage;
 import lombok.extern.slf4j.Slf4j;
-
+ 
 @Slf4j
 public class LLMTextAnalysisService implements TextAnalysisService {
 
@@ -16,7 +16,7 @@ public class LLMTextAnalysisService implements TextAnalysisService {
 
 	public LLMTextAnalysisService(ChatLanguageModel chatModel) {
 		super();
-		this.agent = AiServices.create(TextAnalysisAgent.class, chatModel);
+		this.agent = AiServices.create(TextAnalysisAgent.class, chatModel.getModel());
 	}
 
 	interface TextAnalysisAgent {

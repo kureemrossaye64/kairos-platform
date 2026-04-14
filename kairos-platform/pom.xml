@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.5.5</version>
+		<version>3.5.10</version>
 	</parent>
 	<groupId>com.kairos</groupId>
 	<artifactId>kairos-platform</artifactId>
@@ -18,13 +18,14 @@
 		<!-- Project-wide Properties -->
 		<java.version>17</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+		<spring.boot.version>3.5.10</spring.boot.version>
 		<!-- Key Dependency Versions -->
-		<langchain4j.version>1.4.0</langchain4j.version>
+		<langchain4j.stable.version>1.10.0</langchain4j.stable.version>
+		<lanchain4j.unstable.version>1.10.0-beta18</lanchain4j.unstable.version>
 		<google.cloud.version>26.66.0</google.cloud.version>
 		<testcontainers.version>1.19.7</testcontainers.version>
 		<pgvector.version>0.1.6</pgvector.version>
-		<jjwt.version>0.13.0</jjwt.version>
+		<jts-core.version>1.19.0</jts-core.version>
 		<tika.version>3.2.2</tika.version>
 	</properties>
 
@@ -34,11 +35,17 @@
 		<module>kairos-vector-search</module>
 		<module>kairos-ingestion</module>
 		<module>kairos-agentic-framework</module>
-		<module>cultural-archive-app</module>
-		<module>sports-atlas-app</module>
 		<module>kairos-storage</module>
 		<module>kairos-notification</module>
 		<module>kairos-crawler</module>
+		<module>pulsberry</module>
+		<module>kairos-autoconfigure</module>
+		<module>kairos-spring-boot-starter-core</module>
+		<module>kairos-spring-boot-starter-agent</module>
+		<module>kairos-spring-boot-starter-vector</module>
+		<module>kairos-spring-boot-starter-crawler</module>
+		<module>kairos-spring-boot-starter-ingestion</module>
+		<module>pulsberry-simple</module>
 	</modules>
 
 	<dependencyManagement>
@@ -47,7 +54,7 @@
 			<dependency>
 				<groupId>dev.langchain4j</groupId>
 				<artifactId>langchain4j-bom</artifactId>
-				<version>${langchain4j.version}</version>
+				<version>${langchain4j.stable.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -62,16 +69,14 @@
 			</dependency>
 
 
-			<!-- https://mvnrepository.com/artifact/org.apache.tika/tika-parsers -->
 			<dependency>
 				<groupId>org.apache.tika</groupId>
-				<artifactId>tika-parsers</artifactId>
-				<version>3.2.2</version>
+				<artifactId>tika-bom</artifactId>
+				<version>${tika.version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
 
-			<!-- Testcontainers BOM for integration testing -->
 			<dependency>
 				<groupId>org.testcontainers</groupId>
 				<artifactId>testcontainers-bom</artifactId>
@@ -80,7 +85,6 @@
 				<scope>import</scope>
 			</dependency>
 
-			<!-- Define versions for our own internal modules -->
 			<dependency>
 				<groupId>com.kairos</groupId>
 				<artifactId>kairos-core</artifactId>
@@ -122,6 +126,119 @@
 				<artifactId>kairos-crawler</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.kairos</groupId>
+				<artifactId>kairos-autoconfigure</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.kairos</groupId>
+				<artifactId>kairos-spring-boot-starter-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.kairos</groupId>
+				<artifactId>kairos-spring-boot-starter-agent</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.kairos</groupId>
+				<artifactId>kairos-spring-boot-starter-vector</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.kairos</groupId>
+				<artifactId>kairos-spring-boot-starter-crawler</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.kairos</groupId>
+				<artifactId>kairos-spring-boot-starter-ingestion</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-anthropic-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-ollama-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-open-ai-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-azure-ai-search-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-azure-open-ai-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-voyage-ai-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-github-models-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-google-ai-gemini-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-vertex-ai-gemini-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-elasticsearch-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-milvus-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>dev.langchain4j</groupId>
+				<artifactId>langchain4j-mistral-ai-spring-boot-starter</artifactId>
+				<version>${lanchain4j.unstable.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.locationtech.jts</groupId>
+				<artifactId>jts-core</artifactId>
+				<version>${jts-core.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 </project>

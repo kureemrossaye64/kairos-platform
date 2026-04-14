@@ -2,8 +2,6 @@ package com.kairos.ingestion.processor;
 
 import java.util.stream.Stream;
 
-import org.springframework.stereotype.Component;
-
 import com.kairos.core.ai.AudioAnalysisService;
 import com.kairos.core.ingestion.SourceRecord;
 import com.kairos.ingestion.pipeline.Processor;
@@ -13,7 +11,6 @@ import dev.langchain4j.data.document.Metadata;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Component
 @Slf4j
 @RequiredArgsConstructor
 public class AudioTranscriptionProcessor implements Processor<SourceRecord, Document> {

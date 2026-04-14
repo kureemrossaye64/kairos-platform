@@ -1,0 +1,8 @@
+com.kairos.autoconfigure.KairosAutoConfiguration
+com.kairos.autoconfigure.KairosAIAutoConfiguration
+com.kairos.autoconfigure.KairosVectorStoreAutoConfiguration
+com.kairos.autoconfigure.KairosCrawlerAutoConfiguration
+com.kairos.autoconfigure.KairosIngestionAutoConfiguration
+com.kairos.autoconfigure.KairosCrawlerAutoConfiguration
+com.kairos.autoconfigure.KairosAgenticAutoConfiguration
+com.kairos.autoconfigure.KairosVectorStoreAutoConfiguration
